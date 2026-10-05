@@ -1,1056 +1,1062 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>IER • Elite VIII</title>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>IER • ELITE VIII</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         HEADER CSS
+    ====================================================== -->
 
     <style>
 
         /* =====================================================
-           RESET
-        ===================================================== */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: #180609;
-            color: #eadcc6;
-            font-family: Georgia, "Times New Roman", serif;
-            overflow-x: hidden;
-        }
-
-
-        /* =====================================================
-           COLOR SYSTEM
-        ===================================================== */
+           ROOT
+        ====================================================== */
 
         :root {
-            --burgundy: #24080d;
-            --burgundy-dark: #130407;
-            --burgundy-soft: #351015;
-            --cream: #eadcc6;
-            --cream-soft: #d9c8ad;
-            --gold: #c7ad87;
-            --line: rgba(234, 220, 198, 0.18);
+
+            --cream: #f5f0e6;
+
+            --cream-soft: #eee7d8;
+
+            --burgundy: #641c2b;
+
+            --burgundy-dark: #43121d;
+
+            --burgundy-light: #7b2939;
+
+            --text-dark: #24191b;
+
+            --text-soft: #66575a;
+
+            --border-soft: rgba(100, 28, 43, 0.18);
+
         }
+
 
 
         /* =====================================================
-           NAVBAR
-        ===================================================== */
+           RESET
+        ====================================================== */
 
-        .navbar {
-            height: 78px;
-            width: 100%;
+        * {
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            margin: 0;
 
-            padding: 0 6.5%;
+            padding: 0;
 
-            background: #120406;
+            box-sizing: border-box;
 
-            border-bottom: 1px solid var(--line);
-
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
 
 
-        /* LEFT LOGO */
+        html {
 
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 18px;
+            scroll-behavior: smooth;
 
-            text-decoration: none;
-            color: var(--cream);
-        }
-
-        .nav-logo {
-            width: 74px;
-            height: 46px;
-
-            object-fit: contain;
-        }
-
-        .nav-divider {
-            width: 1px;
-            height: 42px;
-
-            background: rgba(234, 220, 198, 0.4);
-        }
-
-        .nav-title {
-            display: flex;
-            flex-direction: column;
-            gap: 1px;
-        }
-
-        .nav-title-main {
-            font-size: 25px;
-            font-style: italic;
-            line-height: 1;
-        }
-
-        .nav-title-sub {
-            font-size: 12px;
-            letter-spacing: 0.3px;
-            color: var(--cream-soft);
         }
 
 
-        /* NAVIGATION */
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 38px;
-        }
-
-        .nav-links a {
-            color: var(--cream);
-            text-decoration: none;
-
-            font-family: Arial, sans-serif;
-            font-size: 12px;
-
-            letter-spacing: 1.4px;
-            text-transform: uppercase;
-
-            padding: 29px 0 25px;
-
-            position: relative;
-
-            opacity: 0.9;
-
-            transition: 0.3s ease;
-        }
-
-        .nav-links a::after {
-            content: "";
-
-            position: absolute;
-
-            left: 0;
-            bottom: 17px;
-
-            width: 0;
-            height: 1px;
+        body {
 
             background: var(--cream);
 
-            transition: 0.3s ease;
+            color: var(--text-dark);
+
+            font-family:
+                "Montserrat",
+                Arial,
+                sans-serif;
+
+            min-height: 100vh;
+
         }
 
-        .nav-links a:hover {
-            opacity: 1;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
 
 
         /* =====================================================
-           HERO
-        ===================================================== */
+           HEADER
+        ====================================================== */
 
-        .hero {
+        .site-header {
 
-            min-height: 410px;
+            position: fixed;
 
-            position: relative;
+            top: 0;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            left: 0;
 
-            overflow: hidden;
+            width: 100%;
+
+            height: 82px;
 
             background:
-                linear-gradient(
-                    rgba(46, 10, 15, 0.72),
-                    rgba(46, 10, 15, 0.72)
-                ),
-                url("ru-campus.jpg");
+                rgba(245, 240, 230, 0.94);
 
-            background-size: cover;
-            background-position: center center;
+            border-bottom:
+                1px solid var(--border-soft);
 
-            border-bottom: 1px solid rgba(234, 220, 198, 0.2);
+            backdrop-filter: blur(14px);
+
+            -webkit-backdrop-filter: blur(14px);
+
+            z-index: 1000;
+
+            transition:
+                height 0.3s ease,
+                background 0.3s ease,
+                box-shadow 0.3s ease;
+
         }
 
 
-        /* DARK BURGUNDY OVERLAY */
 
-        .hero::before {
-            content: "";
+        /* Header after scrolling */
 
-            position: absolute;
-            inset: 0;
+        .site-header.scrolled {
+
+            height: 70px;
 
             background:
-                linear-gradient(
-                    90deg,
-                    rgba(27, 5, 9, 0.80) 0%,
-                    rgba(48, 10, 15, 0.42) 50%,
-                    rgba(25, 5, 8, 0.78) 100%
-                );
-
-            z-index: 1;
-        }
-
-
-        /* SUBTLE VIGNETTE */
-
-        .hero::after {
-            content: "";
-
-            position: absolute;
-            inset: 0;
+                rgba(245, 240, 230, 0.98);
 
             box-shadow:
-                inset 0 0 120px rgba(0, 0, 0, 0.45);
+                0 8px 30px
+                rgba(67, 18, 29, 0.08);
 
-            z-index: 2;
-
-            pointer-events: none;
         }
 
 
-        /* HERO CONTENT */
 
-        .hero-content {
+        /* =====================================================
+           NAV CONTAINER
+        ====================================================== */
 
-            position: relative;
+        .nav-container {
 
-            z-index: 3;
+            width: min(1240px, 92%);
 
-            width: min(1000px, 90%);
+            height: 100%;
 
-            text-align: center;
+            margin: auto;
 
             display: flex;
-            flex-direction: column;
+
             align-items: center;
+
+            justify-content: space-between;
+
         }
 
 
-        /* TOP BRAND */
 
-        .hero-brand {
+        /* =====================================================
+           BRAND
+        ====================================================== */
+
+        .brand {
 
             display: flex;
+
             align-items: center;
+
+            gap: 13px;
+
+            text-decoration: none;
+
+            color: var(--text-dark);
+
+        }
+
+
+
+        /* Roman VIII Circle */
+
+        .brand-mark {
+
+            width: 48px;
+
+            height: 48px;
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+
             justify-content: center;
 
-            gap: 26px;
+            border:
+                1.5px solid var(--burgundy);
 
-            margin-bottom: 27px;
+            border-radius: 50%;
+
+            color: var(--burgundy);
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size: 17px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            transition:
+                background 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease;
+
         }
 
 
-        .hero-logo {
 
-            width: 145px;
-            height: 92px;
+        /* Brand hover */
 
-            object-fit: contain;
+        .brand:hover .brand-mark {
 
-            /*
-              If your ierlogo.png is already cream/transparent,
-              this will display it normally.
-            */
+            background: var(--burgundy);
+
+            color: var(--cream);
+
+            transform:
+                rotate(-5deg);
+
         }
 
 
-        .hero-divider {
 
-            width: 1px;
-            height: 92px;
+        /* =====================================================
+           BRAND TEXT
+        ====================================================== */
 
-            background: rgba(234, 220, 198, 0.55);
-        }
-
-
-        .hero-name {
-
-            text-align: left;
+        .brand-text {
 
             display: flex;
+
             flex-direction: column;
+
+            gap: 4px;
+
         }
 
 
-        .hero-name h1 {
 
-            color: var(--cream);
+        .brand-main {
 
-            font-size: clamp(52px, 6vw, 76px);
+            color: var(--burgundy);
 
-            line-height: 0.9;
-
-            font-weight: 500;
-
-            font-style: italic;
-
-            letter-spacing: -2px;
-
-            margin-bottom: 10px;
-        }
-
-
-        .hero-date {
-
-            color: var(--cream);
+            font-family:
+                "Montserrat",
+                Arial,
+                sans-serif;
 
             font-size: 15px;
 
-            letter-spacing: 0.1px;
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+
+            line-height: 1;
+
+        }
+
+
+
+        .brand-sub {
+
+            color: #806c6f;
+
+            font-family:
+                "Montserrat",
+                Arial,
+                sans-serif;
+
+            font-size: 7px;
+
+            font-weight: 600;
+
+            letter-spacing: 1.45px;
+
+            line-height: 1.3;
 
             white-space: nowrap;
+
         }
 
 
+
         /* =====================================================
-           INSTITUTE NAME
-        ===================================================== */
+           DESKTOP NAVIGATION
+        ====================================================== */
 
-        .hero-institute {
-
-            margin-top: 4px;
+        .main-nav {
 
             display: flex;
-            flex-direction: column;
 
-            gap: 8px;
+            align-items: center;
+
+            gap: 7px;
+
         }
 
 
-        .hero-institute div {
 
-            color: var(--cream);
-
-            font-family: Arial, Helvetica, sans-serif;
-
-            font-size: 12px;
-
-            letter-spacing: 5px;
-
-            text-transform: uppercase;
-
-            opacity: 0.95;
-        }
-
-
-        /* =====================================================
-           QUOTE
-        ===================================================== */
-
-        .hero-quote {
-
-            margin-top: 30px;
-
-            color: var(--cream);
-
-            font-size: 18px;
-
-            font-style: italic;
-
-            line-height: 1.55;
-
-            max-width: 620px;
-
-            opacity: 0.9;
-        }
-
-
-        /* =====================================================
-           MEMBERS SECTION
-        ===================================================== */
-
-        .members-section {
-
-            padding: 85px 7%;
-
-            background:
-                radial-gradient(
-                    circle at top,
-                    rgba(77, 17, 24, 0.35),
-                    transparent 55%
-                ),
-                #170609;
-        }
-
-
-        .section-label {
-
-            color: var(--gold);
-
-            font-family: Arial, sans-serif;
-
-            font-size: 11px;
-
-            letter-spacing: 5px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 12px;
-        }
-
-
-        .section-title {
-
-            font-size: 45px;
-
-            font-weight: normal;
-
-            color: var(--cream);
-
-            margin-bottom: 15px;
-        }
-
-
-        .section-description {
-
-            color: var(--cream-soft);
-
-            font-size: 16px;
-
-            line-height: 1.7;
-
-            max-width: 620px;
-
-            margin-bottom: 40px;
-        }
-
-
-        /* =====================================================
-           MEMBER GRID
-        ===================================================== */
-
-        .member-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, minmax(0, 1fr));
-
-            gap: 22px;
-        }
-
-
-        /* =====================================================
-           MEMBER CARD
-        ===================================================== */
-
-        .member-card {
+        .nav-link {
 
             position: relative;
 
-            min-height: 330px;
+            display: inline-flex;
 
-            border: 1px solid rgba(234, 220, 198, 0.18);
+            align-items: center;
 
-            background: rgba(38, 9, 14, 0.75);
+            justify-content: center;
 
-            overflow: hidden;
+            padding: 10px 17px;
+
+            color: #4e4143;
+
+            text-decoration: none;
+
+            font-family:
+                "Montserrat",
+                Arial,
+                sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
 
             transition:
-                transform 0.45s ease,
-                border-color 0.45s ease,
-                box-shadow 0.45s ease;
+                color 0.3s ease,
+                background 0.3s ease;
 
-            cursor: pointer;
         }
 
-
-        .member-card:hover {
-
-            transform: translateY(-8px);
-
-            border-color: rgba(234, 220, 198, 0.5);
-
-            box-shadow:
-                0 18px 45px rgba(0, 0, 0, 0.45);
-        }
-
-
-        .member-photo {
-
-            width: 100%;
-
-            height: 240px;
-
-            overflow: hidden;
-        }
-
-
-        .member-photo img {
-
-            width: 100%;
-            height: 100%;
-
-            object-fit: cover;
-
-            transition: transform 0.65s ease;
-        }
-
-
-        .member-card:hover .member-photo img {
-
-            transform: scale(1.12);
-        }
-
-
-        .member-info {
-
-            padding: 17px 18px 20px;
-        }
-
-
-        .member-roll {
-
-            color: var(--gold);
-
-            font-family: Arial, sans-serif;
-
-            font-size: 10px;
-
-            letter-spacing: 3px;
-
-            margin-bottom: 6px;
-        }
-
-
-        .member-name {
-
-            color: var(--cream);
-
-            font-size: 20px;
-
-            margin-bottom: 5px;
-        }
-
-
-        .member-nickname {
-
-            color: var(--cream-soft);
-
-            font-size: 14px;
-
-            font-style: italic;
-        }
 
 
         /* =====================================================
-           ACHIEVEMENTS
-        ===================================================== */
+           NAV UNDERLINE
+        ====================================================== */
 
-        .achievements {
+        .nav-link::after {
 
-            padding: 85px 7%;
+            content: "";
+
+            position: absolute;
+
+            left: 17px;
+
+            right: 17px;
+
+            bottom: 3px;
+
+            height: 2px;
 
             background:
-                linear-gradient(
-                    rgba(40, 8, 13, 0.88),
-                    rgba(20, 4, 7, 0.96)
-                ),
-                url("ru-campus.jpg");
+                var(--burgundy);
 
-            background-size: cover;
-            background-position: center;
+            transform:
+                scaleX(0);
 
-            border-top: 1px solid var(--line);
+            transform-origin:
+                center;
+
+            transition:
+                transform 0.3s ease;
+
         }
 
 
-        .achievement-box {
 
-            margin-top: 40px;
+        .nav-link:hover {
 
-            border: 1px solid rgba(234, 220, 198, 0.18);
+            color:
+                var(--burgundy);
 
-            padding: 35px;
-
-            background: rgba(20, 4, 7, 0.55);
         }
 
 
-        .achievement-box h3 {
 
-            color: var(--cream);
+        .nav-link:hover::after {
 
-            font-size: 28px;
+            transform:
+                scaleX(1);
 
-            font-weight: normal;
-
-            margin-bottom: 15px;
         }
 
-
-        .achievement-box p {
-
-            color: var(--cream-soft);
-
-            font-size: 16px;
-
-            line-height: 1.8;
-        }
 
 
         /* =====================================================
-           FOOTER
-        ===================================================== */
+           ACTIVE NAVIGATION
+        ====================================================== */
 
-        footer {
+        .nav-link.active {
 
-            padding: 30px 7%;
+            color:
+                var(--cream);
 
-            text-align: center;
+            background:
+                var(--burgundy);
 
-            background: #100305;
+            border-radius:
+                30px;
 
-            border-top: 1px solid var(--line);
+            padding-left: 20px;
 
-            color: var(--cream-soft);
+            padding-right: 20px;
 
-            font-size: 13px;
         }
 
 
+
+        .nav-link.active::after {
+
+            display: none;
+
+        }
+
+
+
         /* =====================================================
-           RESPONSIVE
-        ===================================================== */
+           MOBILE MENU BUTTON
+        ====================================================== */
+
+        .menu-toggle {
+
+            display: none;
+
+            width: 44px;
+
+            height: 44px;
+
+            padding: 0;
+
+            border:
+                1px solid var(--border-soft);
+
+            border-radius: 50%;
+
+            background:
+                transparent;
+
+            cursor: pointer;
+
+            align-items: center;
+
+            justify-content: center;
+
+            flex-direction: column;
+
+            gap: 5px;
+
+        }
+
+
+
+        .menu-toggle span {
+
+            display: block;
+
+            width: 18px;
+
+            height: 2px;
+
+            background:
+                var(--burgundy);
+
+            transition:
+                transform 0.3s ease,
+                opacity 0.3s ease;
+
+        }
+
+
+
+        /* =====================================================
+           MOBILE MENU ANIMATION
+        ====================================================== */
+
+        .menu-toggle.active span:nth-child(1) {
+
+            transform:
+                translateY(7px)
+                rotate(45deg);
+
+        }
+
+
+        .menu-toggle.active span:nth-child(2) {
+
+            opacity: 0;
+
+        }
+
+
+        .menu-toggle.active span:nth-child(3) {
+
+            transform:
+                translateY(-7px)
+                rotate(-45deg);
+
+        }
+
+
+
+        /* =====================================================
+           MOBILE NAVIGATION
+        ====================================================== */
 
         @media (max-width: 900px) {
 
-            .navbar {
-                padding: 0 4%;
+
+            .site-header {
+
+                height: 74px;
+
             }
 
-            .nav-links {
-                gap: 20px;
+
+
+            .nav-container {
+
+                width: 90%;
+
             }
 
-            .member-grid {
-                grid-template-columns:
-                    repeat(2, minmax(0, 1fr));
+
+
+            .brand-mark {
+
+                width: 43px;
+
+                height: 43px;
+
+                font-size: 15px;
+
             }
 
-            .hero {
-                min-height: 390px;
+
+
+            .brand-main {
+
+                font-size: 13px;
+
             }
+
+
+
+            .brand-sub {
+
+                font-size: 6px;
+
+            }
+
+
+
+            /* Show hamburger */
+
+            .menu-toggle {
+
+                display: flex;
+
+            }
+
+
+
+            /* Mobile navigation */
+
+            .main-nav {
+
+                position: absolute;
+
+                top: 74px;
+
+                left: 0;
+
+                width: 100%;
+
+                padding:
+                    15px 5% 20px;
+
+                background:
+                    rgba(245, 240, 230, 0.98);
+
+                backdrop-filter:
+                    blur(16px);
+
+                -webkit-backdrop-filter:
+                    blur(16px);
+
+                border-bottom:
+                    1px solid var(--border-soft);
+
+                display: flex;
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+                gap: 4px;
+
+                opacity: 0;
+
+                visibility: hidden;
+
+                transform:
+                    translateY(-10px);
+
+                transition:
+                    opacity 0.3s ease,
+                    visibility 0.3s ease,
+                    transform 0.3s ease;
+
+            }
+
+
+
+            /* Open mobile menu */
+
+            .main-nav.open {
+
+                opacity: 1;
+
+                visibility: visible;
+
+                transform:
+                    translateY(0);
+
+            }
+
+
+
+            .nav-link {
+
+                width: 100%;
+
+                justify-content:
+                    flex-start;
+
+                padding:
+                    13px 18px;
+
+                border-radius: 8px;
+
+            }
+
+
+
+            .nav-link.active {
+
+                padding-left: 18px;
+
+                padding-right: 18px;
+
+                border-radius: 8px;
+
+            }
+
+
+
+            .nav-link::after {
+
+                display: none;
+
+            }
+
         }
 
 
-        @media (max-width: 650px) {
 
-            .navbar {
-                height: 70px;
-            }
+        /* =====================================================
+           SMALL PHONES
+        ====================================================== */
 
-            .nav-links {
+        @media (max-width: 480px) {
+
+
+            .brand-sub {
+
                 display: none;
+
             }
 
-            .nav-logo {
-                width: 60px;
+
+
+            .brand-main {
+
+                font-size: 12px;
+
+                letter-spacing: 1px;
+
             }
 
-            .nav-title-main {
-                font-size: 20px;
+
+
+            .brand-mark {
+
+                width: 40px;
+
+                height: 40px;
+
+                font-size: 14px;
+
             }
 
-            .nav-title-sub {
-                font-size: 9px;
-            }
-
-            .hero {
-                min-height: 520px;
-            }
-
-            .hero-brand {
-                flex-direction: column;
-
-                gap: 18px;
-            }
-
-            .hero-divider {
-                width: 100px;
-                height: 1px;
-            }
-
-            .hero-name {
-                text-align: center;
-                align-items: center;
-            }
-
-            .hero-name h1 {
-                font-size: 55px;
-            }
-
-            .hero-date {
-                font-size: 13px;
-            }
-
-            .hero-institute div {
-                font-size: 9px;
-                letter-spacing: 3px;
-            }
-
-            .hero-quote {
-                font-size: 15px;
-                padding: 0 15px;
-            }
-
-            .member-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 36px;
-            }
         }
 
     </style>
+
 </head>
+
 
 
 <body>
 
 
     <!-- =====================================================
-         NAVBAR
-    ===================================================== -->
+         HEADER / NAVBAR
+    ====================================================== -->
 
-    <nav class="navbar">
+    <header
+        class="site-header"
+        id="siteHeader"
+    >
 
-        <a href="#home" class="nav-brand">
+        <div class="nav-container">
 
-            <img
-                src="ierlogo.png"
-                class="nav-logo"
-                alt="IER Elite VIII"
+
+            <!-- =================================================
+                 BRAND / LOGO
+            ================================================== -->
+
+            <a
+                href="#home"
+                class="brand"
             >
 
-            <span class="nav-divider"></span>
-
-            <span class="nav-title">
-
-                <span class="nav-title-main">
-                    Elite VIII
-                </span>
-
-                <span class="nav-title-sub">
-                    A story Since September 25, 2023
-                </span>
-
-            </span>
-
-        </a>
+                <div class="brand-mark">
+                    VIII
+                </div>
 
 
-        <div class="nav-links">
+                <div class="brand-text">
 
-            <a href="#home">Home</a>
+                    <span class="brand-main">
+                        IER • ELITE VIII
+                    </span>
 
-            <a href="#members">Members</a>
+                    <span class="brand-sub">
+                        A STORY SINCE SEPTEMBER 25, 2023
+                    </span>
 
-            <a href="#achievements">Achievements</a>
+                </div>
 
-        </div>
-
-    </nav>
+            </a>
 
 
 
-    <!-- =====================================================
-         HERO
-    ===================================================== -->
+            <!-- =================================================
+                 DESKTOP NAVIGATION
+            ================================================== -->
 
-    <section class="hero" id="home">
+            <nav
+                class="main-nav"
+                id="mainNav"
+            >
 
-        <div class="hero-content">
-
-
-            <div class="hero-brand">
-
-
-                <img
-                    src="ierlogo.png"
-                    class="hero-logo"
-                    alt="IER Logo"
+                <a
+                    href="#home"
+                    class="nav-link active"
                 >
+                    HOME
+                </a>
 
 
-                <div class="hero-divider"></div>
+                <a
+                    href="#story"
+                    class="nav-link"
+                >
+                    OUR BATCH
+                </a>
 
 
-                <div class="hero-name">
-
-                    <h1>
-                        Elite VIII
-                    </h1>
-
-                    <div class="hero-date">
-                        A story Since September 25, 2023
-                    </div>
-
-                </div>
+                <a
+                    href="#members"
+                    class="nav-link"
+                >
+                    MEMBERS
+                </a>
 
 
-            </div>
+                <a
+                    href="#memories"
+                    class="nav-link"
+                >
+                    MEMORIES
+                </a>
 
 
+                <a
+                    href="#achievements"
+                    class="nav-link"
+                >
+                    ACHIEVEMENTS
+                </a>
 
-            <div class="hero-institute">
-
-                <div>
-                    Institute of Education and Research
-                </div>
-
-                <div>
-                    University of Rajshahi
-                </div>
-
-            </div>
+            </nav>
 
 
 
-            <div class="hero-quote">
+            <!-- =================================================
+                 MOBILE MENU BUTTON
+            ================================================== -->
 
-                “Different paths, same destination —<br>
-                a lifetime of togetherness.”
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
 
-            </div>
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+            </button>
 
 
         </div>
 
-    </section>
+    </header>
 
 
 
     <!-- =====================================================
-         MEMBERS
-    ===================================================== -->
+         TEMPORARY SPACE
+         Hero will come here next
+    ====================================================== -->
 
-    <section class="members-section" id="members">
+    <main id="home">
 
-        <div class="section-label">
-            The People
-        </div>
+        <div
+            style="
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: Montserrat, sans-serif;
+                color: #641c2b;
+                text-align: center;
+            "
+        >
 
-        <h2 class="section-title">
-            Meet Our Batch
-        </h2>
+            <div>
 
-        <p class="section-description">
-            Every person carries a different story.
-            Together, those stories make our batch.
-        </p>
+                <h1
+                    style="
+                        font-family: 'Playfair Display', serif;
+                        font-size: clamp(40px, 7vw, 90px);
+                        margin-bottom: 10px;
+                    "
+                >
+                    ELITE VIII
+                </h1>
 
-
-
-        <div class="member-grid">
-
-
-            <!-- MEMBER 01 -->
-
-            <div class="member-card">
-
-                <div class="member-photo">
-                    <img
-                        src="member01.jpg"
-                        alt="Member 01"
-                    >
-                </div>
-
-                <div class="member-info">
-
-                    <div class="member-roll">
-                        ROLL 01
-                    </div>
-
-                    <div class="member-name">
-                        Member Name
-                    </div>
-
-                    <div class="member-nickname">
-                        “Nickname”
-                    </div>
-
-                </div>
+                <p>
+                    Hero section will be added here.
+                </p>
 
             </div>
-
-
-
-            <!-- MEMBER 02 -->
-
-            <div class="member-card">
-
-                <div class="member-photo">
-                    <img
-                        src="member02.jpg"
-                        alt="Member 02"
-                    >
-                </div>
-
-                <div class="member-info">
-
-                    <div class="member-roll">
-                        ROLL 02
-                    </div>
-
-                    <div class="member-name">
-                        Member Name
-                    </div>
-
-                    <div class="member-nickname">
-                        “Nickname”
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- MEMBER 03 -->
-
-            <div class="member-card">
-
-                <div class="member-photo">
-                    <img
-                        src="member03.jpg"
-                        alt="Member 03"
-                    >
-                </div>
-
-                <div class="member-info">
-
-                    <div class="member-roll">
-                        ROLL 03
-                    </div>
-
-                    <div class="member-name">
-                        Member Name
-                    </div>
-
-                    <div class="member-nickname">
-                        “Nickname”
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- MEMBER 04 -->
-
-            <div class="member-card">
-
-                <div class="member-photo">
-                    <img
-                        src="member04.jpg"
-                        alt="Member 04"
-                    >
-                </div>
-
-                <div class="member-info">
-
-                    <div class="member-roll">
-                        ROLL 04
-                    </div>
-
-                    <div class="member-name">
-                        Member Name
-                    </div>
-
-                    <div class="member-nickname">
-                        “Nickname”
-                    </div>
-
-                </div>
-
-            </div>
-
 
         </div>
 
-    </section>
+    </main>
 
 
 
     <!-- =====================================================
-         ACHIEVEMENTS
-    ===================================================== -->
+         JAVASCRIPT
+    ====================================================== -->
 
-    <section class="achievements" id="achievements">
-
-        <div class="section-label">
-            Our Journey
-        </div>
-
-        <h2 class="section-title">
-            Achievements
-        </h2>
-
-        <p class="section-description">
-            The moments, milestones and achievements
-            that became part of our batch story.
-        </p>
+    <script>
 
 
-        <div class="achievement-box">
+        /* =====================================================
+           GET ELEMENTS
+        ====================================================== */
 
-            <h3>
-                Our Story Continues
-            </h3>
+        const siteHeader =
+            document.getElementById("siteHeader");
 
-            <p>
-                Together We Achieve, Together We Celebrate.
-                This space will hold the achievements,
-                milestones and memories of Elite VIII.
-            </p>
+        const menuToggle =
+            document.getElementById("menuToggle");
 
-        </div>
-
-    </section>
+        const mainNav =
+            document.getElementById("mainNav");
 
 
 
-    <!-- =====================================================
-         FOOTER
-    ===================================================== -->
+        /* =====================================================
+           HEADER SCROLL EFFECT
+        ====================================================== */
 
-    <footer>
+        window.addEventListener(
+            "scroll",
+            function () {
 
-        IER • Elite VIII
+                if (window.scrollY > 30) {
 
-        <br><br>
+                    siteHeader.classList.add(
+                        "scrolled"
+                    );
 
-        A story Since September 25, 2023
+                } else {
 
-    </footer>
+                    siteHeader.classList.remove(
+                        "scrolled"
+                    );
+
+                }
+
+            }
+        );
+
+
+
+        /* =====================================================
+           MOBILE MENU TOGGLE
+        ====================================================== */
+
+        menuToggle.addEventListener(
+            "click",
+            function () {
+
+                const isOpen =
+                    mainNav.classList.toggle("open");
+
+
+                menuToggle.classList.toggle(
+                    "active"
+                );
+
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    isOpen
+                );
+
+            }
+        );
+
+
+
+        /* =====================================================
+           CLOSE MOBILE MENU AFTER CLICK
+        ====================================================== */
+
+        document
+            .querySelectorAll(".nav-link")
+            .forEach(
+                function (link) {
+
+                    link.addEventListener(
+                        "click",
+                        function () {
+
+                            mainNav.classList.remove(
+                                "open"
+                            );
+
+
+                            menuToggle.classList.remove(
+                                "active"
+                            );
+
+
+                            menuToggle.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+
+
+        /* =====================================================
+           ACTIVE NAVIGATION
+        ====================================================== */
+
+        const navLinks =
+            document.querySelectorAll(".nav-link");
+
+
+        navLinks.forEach(
+            function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        navLinks.forEach(
+                            function (item) {
+
+                                item.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
+
+
+                        this.classList.add(
+                            "active"
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+    </script>
 
 
 </body>
+
 </html>
