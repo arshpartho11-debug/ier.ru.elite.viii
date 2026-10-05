@@ -1,1 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>IER Elite VIII | Batch</title>
+
+    <meta
+        name="description"
+        content="IER Elite VIII — A digital home for our batch, memories, people and achievements."
+    >
+
+    <style>
+
+        /* =====================================================
+           ROOT
+        ===================================================== */
+
+        :root {
+            --bg: #071016;
+            --bg-soft: #0b171e;
+            --card: rgba(17, 31, 39, 0.72);
+
+            --primary: #35c6b5;
+            --primary-light: #67e0d0;
+
+            --text: #f2f7f6;
+            --text-soft: #a9b8b8;
+
+            --border: rgba(255,255,255,0.09);
+
+            --shadow:
+                0 20px 60px rgba(0,0,0,0.35);
+        }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background:
+                radial-gradient(
+                    circle at 20% 10%,
+                    rgba(53,198,181,0.12),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 80% 30%,
+                    rgba(53,198,181,0.08),
+                    transparent 30%
+                ),
+                var(--bg);
+
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 18px 6%;
+
+            background: rgba(7,16,22,0.72);
+            backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .brand-mark {
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 12px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    #147b74
+                );
+
+            color: #04100f;
+            font-weight: 900;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-soft);
+            font-size: 14px;
+
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-light);
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding:
+                120px 7% 80px;
+
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+
+            padding: 8px 18px;
+
+            border: 1px solid rgba(53,198,181,0.35);
+            border-radius: 50px;
+
+            color: var(--primary-light);
+
+            font-size: 13px;
+            letter-spacing: 2px;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 10vw, 120px);
+
+            line-height: 0.95;
+
+            letter-spacing: -5px;
+
+            margin-bottom: 25px;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #ffffff,
+                    var(--primary-light)
+                );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero h2 {
+            font-size: clamp(20px, 3vw, 32px);
+
+            margin-bottom: 20px;
+
+            color: var(--text);
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+
+            color: var(--text-soft);
+
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .hero-slogan {
+            margin-top: 30px;
+
+            color: var(--primary-light);
+
+            font-size: 15px;
+            font-style: italic;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* =====================================================
+           GENERAL SECTION
+        ===================================================== */
+
+        section {
+            padding: 110px 7%;
+        }
+
+        .section-heading {
+            text-align: center;
+
+            margin-bottom: 60px;
+        }
+
+        .section-heading span {
+            color: var(--primary);
+            font-size: 13px;
+
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(35px, 5vw, 55px);
+            margin-top: 12px;
+        }
+
+        .section-heading p {
+            margin: 15px auto 0;
+
+            max-width: 600px;
+
+            color: var(--text-soft);
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           MEMBERS
+        ===================================================== */
+
+        .members-grid {
+            max-width: 1300px;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(230px, 1fr));
+
+            gap: 28px;
+        }
+
+        .member-card {
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 22px;
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            cursor: pointer;
+
+            box-shadow: var(--shadow);
+
+            transition:
+                transform 0.45s ease,
+                border-color 0.45s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(53,198,181,0.45);
+        }
+
+        .member-photo {
+            width: 100%;
+            height: 300px;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #17252d,
+                    #0c151b
+                );
+        }
+
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.6s ease;
+        }
+
+        .member-card:hover .member-photo img {
+            transform: scale(1.08);
+        }
+
+        .member-info {
+            padding: 22px;
+        }
+
+        .member-roll {
+            color: var(--primary);
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+        }
+
+        .member-name {
+            font-size: 21px;
+
+            margin-top: 7px;
+        }
+
+        .member-special {
+            margin-top: 5px;
+
+            color: var(--text-soft);
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           PROFILE VIEW
+        ===================================================== */
+
+        .profile-view {
+            display: none;
+
+            min-height: 100vh;
+
+            padding:
+                140px 7% 100px;
+
+            background:
+                radial-gradient(
+                    circle at 50% 20%,
+                    rgba(53,198,181,0.10),
+                    transparent 35%
+                ),
+                var(--bg);
+        }
+
+        .profile-view.active {
+            display: block;
+        }
+
+        .profile-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .back-button {
+            display: inline-flex;
+
+            padding: 10px 18px;
+
+            border: 1px solid var(--border);
+            border-radius: 50px;
+
+            color: var(--text-soft);
+
+            margin-bottom: 50px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            color: var(--primary-light);
+            border-color: var(--primary);
+        }
+
+        .profile-content {
+            display: grid;
+
+            grid-template-columns:
+                minmax(280px, 380px) 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+
+            border-radius: 30px;
+
+            overflow: hidden;
+
+            border: 1px solid var(--border);
+
+            box-shadow: var(--shadow);
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .profile-details h1 {
+            font-size: clamp(40px, 6vw, 70px);
+            margin-bottom: 8px;
+        }
+
+        .profile-details .special {
+            color: var(--primary-light);
+            margin-bottom: 35px;
+        }
+
+        .details-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 15px;
+        }
+
+        .detail-item {
+            padding: 18px;
+
+            border-radius: 15px;
+
+            background: rgba(255,255,255,0.035);
+
+            border: 1px solid var(--border);
+        }
+
+        .detail-item span {
+            display: block;
+
+            color: var(--text-soft);
+
+            font-size: 12px;
+
+            margin-bottom: 5px;
+        }
+
+
+        /* =====================================================
+           ACHIEVEMENTS
+        ===================================================== */
+
+        .achievements {
+            background:
+                linear-gradient(
+                    180deg,
+                    transparent,
+                    rgba(53,198,181,0.035)
+                );
+        }
+
+        .achievement-grid {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 25px;
+        }
+
+        .achievement-card {
+            padding: 30px;
+
+            border-radius: 22px;
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            transition: 0.35s;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(53,198,181,0.4);
+        }
+
+        .achievement-icon {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .achievement-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .achievement-card p {
+            color: var(--text-soft);
+
+            line-height: 1.7;
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            padding: 60px 7%;
+
+            text-align: center;
+
+            border-top: 1px solid var(--border);
+
+            color: var(--text-soft);
+        }
+
+        footer strong {
+            color: var(--primary-light);
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                letter-spacing: -3px;
+            }
+
+            .profile-content {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-image {
+                max-width: 420px;
+                margin: auto;
+            }
+
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ===================================================== -->
+
+    <nav class="navbar">
+
+        <a href="#" class="brand">
+
+            <div class="brand-mark">
+                VIII
+            </div>
+
+            <span>
+                IER • ELITE VIII
+            </span>
+
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="#home">Home</a>
+
+            <a href="#members">Members</a>
+
+            <a href="#achievements">Achievements</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         MAIN WEBSITE
+    ===================================================== -->
+
+    <main id="main-site">
+
+
+        <!-- =================================================
+             HERO
+        ================================================= -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <span class="hero-badge">
+                    INSTITUTE OF EDUCATION AND RESEARCH
+                </span>
+
+                <h1>
+                    ELITE VIII
+                </h1>
+
+                <h2>
+                    One Batch. One Story. Many Memories.
+                </h2>
+
+                <p>
+                    A digital home for the people, memories,
+                    journeys and achievements that make
+                    our batch what it is.
+                </p>
+
+                <div class="hero-slogan">
+                    “Together, we become a story worth remembering.”
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MEMBERS
+        ================================================= -->
+
+        <section id="members">
+
+            <div class="section-heading">
+
+                <span>
+                    The People
+                </span>
+
+                <h2>
+                    Meet Our Batch
+                </h2>
+
+                <p>
+                    Every person carries a different story.
+                    Together, those stories make our batch.
+                </p>
+
+            </div>
+
+
+            <div class="members-grid" id="membersGrid">
+
+                <!--
+                    MEMBER CARDS WILL BE GENERATED HERE
+                -->
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ACHIEVEMENTS
+        ================================================= -->
+
+        <section
+            class="achievements"
+            id="achievements"
+        >
+
+            <div class="section-heading">
+
+                <span>
+                    Our Journey
+                </span>
+
+                <h2>
+                    Achievements
+                </h2>
+
+                <p>
+                    The moments, milestones and achievements
+                    that became part of our batch story.
+                </p>
+
+            </div>
+
+
+            <div class="achievement-grid">
+
+                <article class="achievement-card">
+
+                    <div class="achievement-icon">
+                        🏆
+                    </div>
+
+                    <h3>
+                        Our First Achievement
+                    </h3>
+
+                    <p>
+                        Achievement details will be added
+                        here later.
+                    </p>
+
+                </article>
+
+
+                <article class="achievement-card">
+
+                    <div class="achievement-icon">
+                        🌟
+                    </div>
+
+                    <h3>
+                        Another Milestone
+                    </h3>
+
+                    <p>
+                        More memories and achievements
+                        will be added to this section.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         MEMBER PROFILE VIEW
+    ===================================================== -->
+
+    <section
+        class="profile-view"
+        id="profileView"
+    >
+
+        <div class="profile-container">
+
+            <div
+                class="back-button"
+                onclick="closeProfile()"
+            >
+                ← Back to Batch
+            </div>
+
+
+            <div class="profile-content">
+
+
+                <div class="profile-image">
+
+                    <img
+                        id="profilePhoto"
+                        src=""
+                        alt="Member Photo"
+                    >
+
+                </div>
+
+
+                <div class="profile-details">
+
+                    <h1 id="profileName">
+                        Member Name
+                    </h1>
+
+                    <div
+                        class="special"
+                        id="profileSpecial"
+                    >
+                        Special Name
+                    </div>
+
+
+                    <div class="details-grid">
+
+                        <div class="detail-item">
+
+                            <span>
+                                Roll
+                            </span>
+
+                            <strong id="profileRoll">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-item">
+
+                            <span>
+                                Profile ID
+                            </span>
+
+                            <strong id="profileId">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-item">
+
+                            <span>
+                                Blood Group
+                            </span>
+
+                            <strong id="profileBlood">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-item">
+
+                            <span>
+                                Home District
+                            </span>
+
+                            <strong id="profileDistrict">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-item">
+
+                            <span>
+                                Contact
+                            </span>
+
+                            <strong id="profileContact">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        <p>
+            Made with care by
+            <strong>IER Elite VIII</strong>
+        </p>
+
+        <p style="margin-top:10px;">
+            © 2026 • Our Batch • Our Story
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
+
+    <script>
+
+
+        /* =====================================================
+           MEMBER DATA
+
+           Later we will replace these sample members
+           with the real batch members.
+        ===================================================== */
+
+
+        const members = [
+
+            {
+                name: "Member One",
+                special: "Special Name",
+                roll: "01",
+                id: "IER-001",
+                blood: "A+",
+                district: "Rajshahi",
+                contact: "01XXXXXXXXX",
+                photo: "images/member1.jpg"
+            },
+
+
+            {
+                name: "Member Two",
+                special: "Special Name",
+                roll: "02",
+                id: "IER-002",
+                blood: "B+",
+                district: "Dhaka",
+                contact: "01XXXXXXXXX",
+                photo: "images/member2.jpg"
+            },
+
+
+            {
+                name: "Member Three",
+                special: "Special Name",
+                roll: "03",
+                id: "IER-003",
+                blood: "O+",
+                district: "Rangpur",
+                contact: "01XXXXXXXXX",
+                photo: "images/member3.jpg"
+            },
+
+
+            {
+                name: "Member Four",
+                special: "Special Name",
+                roll: "04",
+                id: "IER-004",
+                blood: "AB+",
+                district: "Khulna",
+                contact: "01XXXXXXXXX",
+                photo: "images/member4.jpg"
+            }
+
+        ];
+
+
+
+        /* =====================================================
+           CREATE MEMBER CARDS
+        ===================================================== */
+
+        const membersGrid =
+            document.getElementById("membersGrid");
+
+
+        members.forEach((member, index) => {
+
+            const card =
+                document.createElement("article");
+
+            card.className = "member-card";
+
+
+            card.innerHTML = `
+
+                <div class="member-photo">
+
+                    <img
+                        src="${member.photo}"
+                        alt="${member.name}"
+                    >
+
+                </div>
+
+
+                <div class="member-info">
+
+                    <div class="member-roll">
+                        ROLL ${member.roll}
+                    </div>
+
+                    <div class="member-name">
+                        ${member.name}
+                    </div>
+
+                    <div class="member-special">
+                        ${member.special}
+                    </div>
+
+                </div>
+
+            `;
+
+
+            card.addEventListener(
+                "click",
+                () => openProfile(index)
+            );
+
+
+            membersGrid.appendChild(card);
+
+        });
+
+
+
+        /* =====================================================
+           OPEN PROFILE
+        ===================================================== */
+
+        function openProfile(index) {
+
+            const member = members[index];
+
+
+            document.getElementById("main-site")
+                .style.display = "none";
+
+
+            document.getElementById("profileView")
+                .classList.add("active");
+
+
+            document.getElementById("profilePhoto")
+                .src = member.photo;
+
+
+            document.getElementById("profileName")
+                .textContent = member.name;
+
+
+            document.getElementById("profileSpecial")
+                .textContent = member.special;
+
+
+            document.getElementById("profileRoll")
+                .textContent = member.roll;
+
+
+            document.getElementById("profileId")
+                .textContent = member.id;
+
+
+            document.getElementById("profileBlood")
+                .textContent = member.blood;
+
+
+            document.getElementById("profileDistrict")
+                .textContent = member.district;
+
+
+            document.getElementById("profileContact")
+                .textContent = member.contact;
+
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+
+        /* =====================================================
+           CLOSE PROFILE
+        ===================================================== */
+
+        function closeProfile() {
+
+            document.getElementById("profileView")
+                .classList.remove("active");
+
+
+            document.getElementById("main-site")
+                .style.display = "block";
+
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+    </script>
+
+
+</body>
+</html>
