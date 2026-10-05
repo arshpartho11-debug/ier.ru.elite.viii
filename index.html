@@ -1,38 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>IER Elite VIII | Batch</title>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        IER Elite VIII | University of Rajshahi
+    </title>
 
     <meta
         name="description"
-        content="IER Elite VIII — A digital home for our batch, memories, people and achievements."
+        content="IER Elite VIII — Together We Achieve, Together We Celebrate."
     >
+
 
     <style>
 
         /* =====================================================
-           ROOT
+           ROOT / COLOR SYSTEM
         ===================================================== */
 
         :root {
-            --bg: #071016;
-            --bg-soft: #0b171e;
-            --card: rgba(17, 31, 39, 0.72);
 
-            --primary: #35c6b5;
-            --primary-light: #67e0d0;
+            --bg: #f5f0e5;
 
-            --text: #f2f7f6;
-            --text-soft: #a9b8b8;
+            --bg-soft: #eee7d9;
 
-            --border: rgba(255,255,255,0.09);
+            --card: rgba(255, 252, 244, 0.84);
+
+            --burgundy: #741a29;
+
+            --burgundy-dark: #57121e;
+
+            --burgundy-light: #8b2638;
+
+            --text: #351016;
+
+            --text-soft: #705b5e;
+
+            --border: rgba(116, 26, 41, 0.14);
 
             --shadow:
-                0 20px 60px rgba(0,0,0,0.35);
+                0 20px 60px rgba(68, 20, 28, 0.10);
+
+            --shadow-hover:
+                0 28px 70px rgba(68, 20, 28, 0.17);
         }
+
 
 
         /* =====================================================
@@ -40,39 +60,56 @@
         ===================================================== */
 
         * {
+
             margin: 0;
+
             padding: 0;
+
             box-sizing: border-box;
+
         }
+
 
         html {
+
             scroll-behavior: smooth;
+
         }
+
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background:
-                radial-gradient(
-                    circle at 20% 10%,
-                    rgba(53,198,181,0.12),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 80% 30%,
-                    rgba(53,198,181,0.08),
-                    transparent 30%
-                ),
-                var(--bg);
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: var(--bg);
 
             color: var(--text);
+
             min-height: 100vh;
+
             overflow-x: hidden;
+
         }
 
+
         a {
+
             color: inherit;
+
             text-decoration: none;
+
         }
+
+
+        button {
+
+            font-family: inherit;
+
+        }
+
 
 
         /* =====================================================
@@ -80,71 +117,158 @@
         ===================================================== */
 
         .navbar {
+
             position: fixed;
+
             top: 0;
+
             left: 0;
+
             width: 100%;
 
             z-index: 1000;
 
             display: flex;
+
+            align-items: center;
+
             justify-content: space-between;
-            align-items: center;
 
-            padding: 18px 6%;
-
-            background: rgba(7,16,22,0.72);
-            backdrop-filter: blur(18px);
-
-            border-bottom: 1px solid var(--border);
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-
-            font-size: 18px;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        .brand-mark {
-            width: 42px;
-            height: 42px;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            border-radius: 12px;
+            padding:
+                17px 6%;
 
             background:
-                linear-gradient(
-                    135deg,
-                    var(--primary),
-                    #147b74
-                );
+                rgba(245, 240, 229, 0.82);
 
-            color: #04100f;
-            font-weight: 900;
+            backdrop-filter:
+                blur(18px);
+
+            -webkit-backdrop-filter:
+                blur(18px);
+
+            border-bottom:
+                1px solid var(--border);
+
         }
+
+
+        .brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 17px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            color: var(--burgundy);
+
+        }
+
+
+        .brand-mark {
+
+            width: 40px;
+
+            height: 40px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border:
+                1px solid var(--burgundy);
+
+            border-radius: 50%;
+
+            color: var(--burgundy);
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+        }
+
 
         .nav-links {
+
             display: flex;
+
+            align-items: center;
+
             gap: 30px;
+
         }
+
 
         .nav-links a {
-            color: var(--text-soft);
-            font-size: 14px;
 
-            transition: 0.3s;
+            position: relative;
+
+            color: var(--text-soft);
+
+            font-size: 13px;
+
+            letter-spacing: 0.8px;
+
+            transition:
+                color 0.3s ease;
+
         }
+
+
+        .nav-links a::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: -7px;
+
+            width: 0;
+
+            height: 1px;
+
+            background:
+                var(--burgundy);
+
+            transition:
+                width 0.3s ease;
+
+        }
+
 
         .nav-links a:hover {
-            color: var(--primary-light);
+
+            color: var(--burgundy);
+
         }
+
+
+        .nav-links a:hover::after {
+
+            width: 100%;
+
+        }
+
 
 
         /* =====================================================
@@ -152,221 +276,503 @@
         ===================================================== */
 
         .hero {
+
             min-height: 100vh;
 
+            position: relative;
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
+            padding:
+                125px 6% 90px;
+
+            overflow: hidden;
+
+            background:
+
+                radial-gradient(
+                    circle at 50% 43%,
+                    rgba(116, 26, 41, 0.055),
+                    transparent 42%
+                ),
+
+                var(--bg);
+
+        }
+
+
+        /* subtle vintage atmosphere */
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(116, 26, 41, 0.025),
+                    transparent
+                );
+
+            opacity: 0.8;
+
+        }
+
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            width: min(100%, 900px);
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
 
             text-align: center;
 
-            padding:
-                120px 7% 80px;
+            animation:
+                heroReveal 1.2s ease both;
 
-            position: relative;
         }
 
-        .hero-content {
-            max-width: 900px;
+
+        /* LOGO */
+
+        .hero-logo-wrap {
+
+            width:
+                min(78vw, 650px);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin-bottom: 22px;
+
         }
 
-        .hero-badge {
-            display: inline-block;
 
-            padding: 8px 18px;
+        .hero-logo {
 
-            border: 1px solid rgba(53,198,181,0.35);
-            border-radius: 50px;
+            width: 100%;
 
-            color: var(--primary-light);
+            height: auto;
 
-            font-size: 13px;
-            letter-spacing: 2px;
+            display: block;
 
-            margin-bottom: 25px;
-        }
+            object-fit: contain;
 
-        .hero h1 {
-            font-size: clamp(55px, 10vw, 120px);
-
-            line-height: 0.95;
-
-            letter-spacing: -5px;
-
-            margin-bottom: 25px;
-
-            background:
-                linear-gradient(
-                    120deg,
-                    #ffffff,
-                    var(--primary-light)
+            filter:
+                drop-shadow(
+                    0 18px 35px
+                    rgba(74, 17, 25, 0.10)
                 );
 
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            transition:
+                transform 0.6s ease,
+                filter 0.6s ease;
+
         }
 
-        .hero h2 {
-            font-size: clamp(20px, 3vw, 32px);
 
-            margin-bottom: 20px;
+        .hero-logo:hover {
 
-            color: var(--text);
+            transform:
+                translateY(-5px)
+                scale(1.015);
+
+            filter:
+                drop-shadow(
+                    0 25px 45px
+                    rgba(74, 17, 25, 0.17)
+                );
+
         }
 
-        .hero p {
+
+        /* HERO TAGLINE */
+
+        .hero-intro {
+
             max-width: 650px;
-            margin: auto;
 
-            color: var(--text-soft);
+            margin:
+                5px auto 30px;
 
-            line-height: 1.8;
-            font-size: 16px;
-        }
+            color: var(--burgundy);
 
-        .hero-slogan {
-            margin-top: 30px;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
 
-            color: var(--primary-light);
+            font-size:
+                clamp(17px, 2vw, 21px);
 
-            font-size: 15px;
             font-style: italic;
 
             letter-spacing: 1px;
+
+            line-height: 1.7;
+
         }
+
+
+        /* EXPLORE BUTTON */
+
+        .hero-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            padding:
+                13px 25px;
+
+            border:
+                1px solid var(--burgundy);
+
+            border-radius: 999px;
+
+            color: var(--burgundy);
+
+            background:
+                rgba(255,255,255,0.38);
+
+            font-size: 12px;
+
+            letter-spacing: 1.7px;
+
+            text-transform: uppercase;
+
+            transition:
+                background 0.35s ease,
+                color 0.35s ease,
+                transform 0.35s ease,
+                box-shadow 0.35s ease;
+
+        }
+
+
+        .hero-button span {
+
+            font-size: 17px;
+
+            transition:
+                transform 0.35s ease;
+
+        }
+
+
+        .hero-button:hover {
+
+            color: #f8f3e8;
+
+            background:
+                var(--burgundy);
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(116, 26, 41, 0.18);
+
+        }
+
+
+        .hero-button:hover span {
+
+            transform:
+                translateY(3px);
+
+        }
+
 
 
         /* =====================================================
-           GENERAL SECTION
+           HERO ANIMATION
         ===================================================== */
 
-        section {
-            padding: 110px 7%;
+        @keyframes heroReveal {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(25px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+
+            }
+
         }
 
+
+
+        /* =====================================================
+           GENERAL SECTIONS
+        ===================================================== */
+
+        section:not(.hero):not(.profile-view) {
+
+            padding:
+                110px 7%;
+
+        }
+
+
         .section-heading {
+
             text-align: center;
 
             margin-bottom: 60px;
+
         }
+
 
         .section-heading span {
-            color: var(--primary);
-            font-size: 13px;
 
-            text-transform: uppercase;
+            color:
+                var(--burgundy);
+
+            font-size: 12px;
+
+            text-transform:
+                uppercase;
+
             letter-spacing: 3px;
+
         }
+
 
         .section-heading h2 {
-            font-size: clamp(35px, 5vw, 55px);
+
             margin-top: 12px;
+
+            color:
+                var(--text);
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(36px, 5vw, 55px);
+
+            font-weight: 500;
+
         }
+
 
         .section-heading p {
-            margin: 15px auto 0;
 
-            max-width: 600px;
+            max-width: 620px;
 
-            color: var(--text-soft);
-            line-height: 1.7;
+            margin:
+                15px auto 0;
+
+            color:
+                var(--text-soft);
+
+            line-height: 1.8;
+
+            font-size: 15px;
+
         }
+
 
 
         /* =====================================================
-           MEMBERS
+           MEMBERS SECTION
         ===================================================== */
 
+        #members {
+
+            background:
+                var(--bg-soft);
+
+        }
+
+
         .members-grid {
+
             max-width: 1300px;
+
             margin: auto;
 
             display: grid;
 
             grid-template-columns:
-                repeat(auto-fit, minmax(230px, 1fr));
+                repeat(
+                    auto-fit,
+                    minmax(230px, 1fr)
+                );
 
             gap: 28px;
+
         }
 
+
         .member-card {
+
             position: relative;
 
             overflow: hidden;
 
-            border-radius: 22px;
+            border-radius: 20px;
 
-            background: var(--card);
+            background:
+                var(--card);
 
-            border: 1px solid var(--border);
+            border:
+                1px solid var(--border);
 
             cursor: pointer;
 
-            box-shadow: var(--shadow);
+            box-shadow:
+                var(--shadow);
 
             transition:
                 transform 0.45s ease,
-                border-color 0.45s ease;
+                border-color 0.45s ease,
+                box-shadow 0.45s ease;
+
         }
+
 
         .member-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(53,198,181,0.45);
+
+            transform:
+                translateY(-10px);
+
+            border-color:
+                rgba(116, 26, 41, 0.35);
+
+            box-shadow:
+                var(--shadow-hover);
+
         }
 
+
         .member-photo {
+
             width: 100%;
-            height: 300px;
+
+            height: 310px;
 
             overflow: hidden;
 
             background:
-                linear-gradient(
-                    135deg,
-                    #17252d,
-                    #0c151b
-                );
+                #e7ded0;
+
         }
 
+
         .member-photo img {
+
             width: 100%;
+
             height: 100%;
 
             object-fit: cover;
 
+            display: block;
+
             transition:
-                transform 0.6s ease;
+                transform 0.65s ease;
+
         }
 
-        .member-card:hover .member-photo img {
-            transform: scale(1.08);
+
+        .member-card:hover
+        .member-photo img {
+
+            transform:
+                scale(1.08);
+
         }
+
 
         .member-info {
-            padding: 22px;
+
+            padding: 21px 22px 24px;
+
         }
+
 
         .member-roll {
-            color: var(--primary);
 
-            font-size: 12px;
+            color:
+                var(--burgundy);
+
+            font-size: 11px;
 
             letter-spacing: 2px;
+
         }
+
 
         .member-name {
-            font-size: 21px;
 
             margin-top: 7px;
+
+            color:
+                var(--text);
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 21px;
+
         }
+
 
         .member-special {
+
             margin-top: 5px;
 
-            color: var(--text-soft);
+            color:
+                var(--text-soft);
 
-            font-size: 14px;
+            font-size: 13px;
+
         }
+
 
 
         /* =====================================================
@@ -374,6 +780,7 @@
         ===================================================== */
 
         .profile-view {
+
             display: none;
 
             min-height: 100vh;
@@ -382,114 +789,201 @@
                 140px 7% 100px;
 
             background:
-                radial-gradient(
-                    circle at 50% 20%,
-                    rgba(53,198,181,0.10),
-                    transparent 35%
-                ),
                 var(--bg);
+
         }
+
 
         .profile-view.active {
+
             display: block;
+
         }
+
 
         .profile-container {
+
             max-width: 1100px;
+
             margin: auto;
+
         }
 
+
         .back-button {
+
             display: inline-flex;
 
-            padding: 10px 18px;
+            align-items: center;
 
-            border: 1px solid var(--border);
-            border-radius: 50px;
+            gap: 8px;
 
-            color: var(--text-soft);
+            padding:
+                10px 18px;
 
-            margin-bottom: 50px;
+            border:
+                1px solid var(--border);
+
+            border-radius: 999px;
+
+            color:
+                var(--text-soft);
 
             cursor: pointer;
 
-            transition: 0.3s;
+            transition:
+                0.3s ease;
+
         }
+
 
         .back-button:hover {
-            color: var(--primary-light);
-            border-color: var(--primary);
+
+            color:
+                var(--burgundy);
+
+            border-color:
+                var(--burgundy);
+
+            transform:
+                translateX(-3px);
+
         }
 
+
         .profile-content {
+
             display: grid;
 
             grid-template-columns:
-                minmax(280px, 380px) 1fr;
+                minmax(280px, 380px)
+                1fr;
 
             gap: 60px;
 
             align-items: center;
+
+            margin-top: 40px;
+
         }
 
-        .profile-image {
-            width: 100%;
-            aspect-ratio: 1 / 1;
 
-            border-radius: 30px;
+        .profile-image {
+
+            width: 100%;
+
+            aspect-ratio: 1 / 1;
 
             overflow: hidden;
 
-            border: 1px solid var(--border);
+            border-radius: 25px;
 
-            box-shadow: var(--shadow);
+            border:
+                1px solid var(--border);
+
+            box-shadow:
+                var(--shadow);
+
         }
 
+
         .profile-image img {
+
             width: 100%;
+
             height: 100%;
 
             object-fit: cover;
+
         }
+
 
         .profile-details h1 {
-            font-size: clamp(40px, 6vw, 70px);
+
+            color:
+                var(--text);
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(40px, 6vw, 70px);
+
+            font-weight: 500;
+
             margin-bottom: 8px;
+
         }
+
 
         .profile-details .special {
-            color: var(--primary-light);
+
+            color:
+                var(--burgundy);
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-style: italic;
+
             margin-bottom: 35px;
+
         }
 
+
         .details-grid {
+
             display: grid;
 
             grid-template-columns:
                 repeat(2, 1fr);
 
             gap: 15px;
+
         }
+
 
         .detail-item {
+
             padding: 18px;
 
-            border-radius: 15px;
+            border-radius: 14px;
 
-            background: rgba(255,255,255,0.035);
+            background:
+                rgba(255,255,255,0.38);
 
-            border: 1px solid var(--border);
+            border:
+                1px solid var(--border);
+
         }
+
 
         .detail-item span {
+
             display: block;
 
-            color: var(--text-soft);
+            color:
+                var(--text-soft);
 
-            font-size: 12px;
+            font-size: 11px;
 
-            margin-bottom: 5px;
+            letter-spacing: 1px;
+
+            margin-bottom: 6px;
+
         }
+
+
+        .detail-item strong {
+
+            color:
+                var(--text);
+
+        }
+
 
 
         /* =====================================================
@@ -497,59 +991,105 @@
         ===================================================== */
 
         .achievements {
+
             background:
-                linear-gradient(
-                    180deg,
-                    transparent,
-                    rgba(53,198,181,0.035)
-                );
+                var(--bg);
+
         }
 
+
         .achievement-grid {
+
             max-width: 1100px;
+
             margin: auto;
 
             display: grid;
 
             grid-template-columns:
-                repeat(auto-fit, minmax(280px, 1fr));
+                repeat(
+                    auto-fit,
+                    minmax(280px, 1fr)
+                );
 
             gap: 25px;
+
         }
+
 
         .achievement-card {
+
             padding: 30px;
 
-            border-radius: 22px;
+            border-radius: 20px;
 
-            background: var(--card);
+            background:
+                var(--card);
 
-            border: 1px solid var(--border);
+            border:
+                1px solid var(--border);
 
-            transition: 0.35s;
+            box-shadow:
+                var(--shadow);
+
+            transition:
+                transform 0.35s ease,
+                box-shadow 0.35s ease,
+                border-color 0.35s ease;
+
         }
+
 
         .achievement-card:hover {
-            transform: translateY(-7px);
-            border-color: rgba(53,198,181,0.4);
+
+            transform:
+                translateY(-7px);
+
+            box-shadow:
+                var(--shadow-hover);
+
+            border-color:
+                rgba(116, 26, 41, 0.35);
+
         }
+
 
         .achievement-icon {
-            font-size: 35px;
+
+            font-size: 32px;
+
             margin-bottom: 20px;
+
         }
+
 
         .achievement-card h3 {
+
+            color:
+                var(--text);
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size: 22px;
+
             margin-bottom: 12px;
+
         }
+
 
         .achievement-card p {
-            color: var(--text-soft);
 
-            line-height: 1.7;
+            color:
+                var(--text-soft);
+
+            line-height: 1.75;
 
             font-size: 14px;
+
         }
+
 
 
         /* =====================================================
@@ -557,18 +1097,31 @@
         ===================================================== */
 
         footer {
-            padding: 60px 7%;
+
+            padding:
+                60px 7%;
 
             text-align: center;
 
-            border-top: 1px solid var(--border);
+            border-top:
+                1px solid var(--border);
 
-            color: var(--text-soft);
+            background:
+                var(--bg-soft);
+
+            color:
+                var(--text-soft);
+
         }
+
 
         footer strong {
-            color: var(--primary-light);
+
+            color:
+                var(--burgundy);
+
         }
+
 
 
         /* =====================================================
@@ -578,29 +1131,119 @@
         @media (max-width: 800px) {
 
             .nav-links {
+
                 display: none;
+
             }
 
-            .hero h1 {
-                letter-spacing: -3px;
+
+            .hero {
+
+                min-height: 92vh;
+
+                padding:
+                    110px 5% 70px;
+
             }
+
+
+            .hero-logo-wrap {
+
+                width:
+                    min(92vw, 500px);
+
+            }
+
+
+            .hero-intro {
+
+                padding:
+                    0 15px;
+
+                font-size: 16px;
+
+            }
+
 
             .profile-content {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
+
             }
+
 
             .profile-image {
+
                 max-width: 420px;
-                margin: auto;
+
+                margin:
+                    auto;
+
             }
 
+
             .details-grid {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
+
             }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .brand {
+
+                font-size: 14px;
+
+            }
+
+
+            .brand-mark {
+
+                width: 35px;
+
+                height: 35px;
+
+                font-size: 11px;
+
+            }
+
+
+            .hero-logo-wrap {
+
+                width: 96vw;
+
+            }
+
+
+            .hero-intro {
+
+                font-size: 15px;
+
+                line-height: 1.6;
+
+            }
+
+
+            .hero-button {
+
+                padding:
+                    12px 20px;
+
+                font-size: 11px;
+
+            }
+
         }
 
     </style>
+
 </head>
+
 
 
 <body>
@@ -612,7 +1255,10 @@
 
     <nav class="navbar">
 
-        <a href="#" class="brand">
+        <a
+            href="#home"
+            class="brand"
+        >
 
             <div class="brand-mark">
                 VIII
@@ -627,11 +1273,17 @@
 
         <div class="nav-links">
 
-            <a href="#home">Home</a>
+            <a href="#home">
+                Home
+            </a>
 
-            <a href="#members">Members</a>
+            <a href="#members">
+                Members
+            </a>
 
-            <a href="#achievements">Achievements</a>
+            <a href="#achievements">
+                Achievements
+            </a>
 
         </div>
 
@@ -650,31 +1302,52 @@
              HERO
         ================================================= -->
 
-        <section class="hero" id="home">
+        <section
+            class="hero"
+            id="home"
+        >
 
             <div class="hero-content">
 
-                <span class="hero-badge">
-                    INSTITUTE OF EDUCATION AND RESEARCH
-                </span>
 
-                <h1>
-                    ELITE VIII
-                </h1>
+                <!-- BATCH LOGO -->
 
-                <h2>
-                    One Batch. One Story. Many Memories.
-                </h2>
+                <div class="hero-logo-wrap">
 
-                <p>
-                    A digital home for the people, memories,
-                    journeys and achievements that make
-                    our batch what it is.
+                    <img
+                        src="ierlogo.png"
+                        alt="IER Elite VIII"
+                        class="hero-logo"
+                    >
+
+                </div>
+
+
+                <!-- HERO TAGLINE -->
+
+                <p class="hero-intro">
+
+                    Together We Achieve,
+                    Together We Celebrate
+
                 </p>
 
-                <div class="hero-slogan">
-                    “Together, we become a story worth remembering.”
-                </div>
+
+                <!-- EXPLORE -->
+
+                <a
+                    href="#members"
+                    class="hero-button"
+                >
+
+                    Explore Our Batch
+
+                    <span>
+                        ↓
+                    </span>
+
+                </a>
+
 
             </div>
 
@@ -686,7 +1359,9 @@
              MEMBERS
         ================================================= -->
 
-        <section id="members">
+        <section
+            id="members"
+        >
 
             <div class="section-heading">
 
@@ -706,10 +1381,14 @@
             </div>
 
 
-            <div class="members-grid" id="membersGrid">
+            <div
+                class="members-grid"
+                id="membersGrid"
+            >
 
                 <!--
-                    MEMBER CARDS WILL BE GENERATED HERE
+                    MEMBER CARDS
+                    WILL BE GENERATED HERE
                 -->
 
             </div>
@@ -747,7 +1426,10 @@
 
             <div class="achievement-grid">
 
-                <article class="achievement-card">
+
+                <article
+                    class="achievement-card"
+                >
 
                     <div class="achievement-icon">
                         🏆
@@ -765,7 +1447,10 @@
                 </article>
 
 
-                <article class="achievement-card">
+
+                <article
+                    class="achievement-card"
+                >
 
                     <div class="achievement-icon">
                         🌟
@@ -803,12 +1488,16 @@
 
         <div class="profile-container">
 
+
             <div
                 class="back-button"
                 onclick="closeProfile()"
             >
+
                 ← Back to Batch
+
             </div>
+
 
 
             <div class="profile-content">
@@ -825,11 +1514,15 @@
                 </div>
 
 
+
                 <div class="profile-details">
 
-                    <h1 id="profileName">
+                    <h1
+                        id="profileName"
+                    >
                         Member Name
                     </h1>
+
 
                     <div
                         class="special"
@@ -839,7 +1532,9 @@
                     </div>
 
 
+
                     <div class="details-grid">
+
 
                         <div class="detail-item">
 
@@ -847,11 +1542,14 @@
                                 Roll
                             </span>
 
-                            <strong id="profileRoll">
+                            <strong
+                                id="profileRoll"
+                            >
                                 —
                             </strong>
 
                         </div>
+
 
 
                         <div class="detail-item">
@@ -860,11 +1558,14 @@
                                 Profile ID
                             </span>
 
-                            <strong id="profileId">
+                            <strong
+                                id="profileId"
+                            >
                                 —
                             </strong>
 
                         </div>
+
 
 
                         <div class="detail-item">
@@ -873,11 +1574,14 @@
                                 Blood Group
                             </span>
 
-                            <strong id="profileBlood">
+                            <strong
+                                id="profileBlood"
+                            >
                                 —
                             </strong>
 
                         </div>
+
 
 
                         <div class="detail-item">
@@ -886,11 +1590,14 @@
                                 Home District
                             </span>
 
-                            <strong id="profileDistrict">
+                            <strong
+                                id="profileDistrict"
+                            >
                                 —
                             </strong>
 
                         </div>
+
 
 
                         <div class="detail-item">
@@ -899,11 +1606,14 @@
                                 Contact
                             </span>
 
-                            <strong id="profileContact">
+                            <strong
+                                id="profileContact"
+                            >
                                 —
                             </strong>
 
                         </div>
+
 
                     </div>
 
@@ -924,12 +1634,20 @@
     <footer>
 
         <p>
+
             Made with care by
-            <strong>IER Elite VIII</strong>
+
+            <strong>
+                IER Elite VIII
+            </strong>
+
         </p>
 
+
         <p style="margin-top:10px;">
-            © 2026 • Our Batch • Our Story
+
+            A Story Since September 25, 2023
+
         </p>
 
     </footer>
@@ -945,59 +1663,123 @@
 
         /* =====================================================
            MEMBER DATA
-
-           Later we will replace these sample members
-           with the real batch members.
         ===================================================== */
-
 
         const members = [
 
             {
-                name: "Member One",
-                special: "Special Name",
-                roll: "01",
-                id: "IER-001",
-                blood: "A+",
-                district: "Rajshahi",
-                contact: "01XXXXXXXXX",
-                photo: "images/member1.jpg"
+
+                name:
+                    "Member One",
+
+                special:
+                    "Special Name",
+
+                roll:
+                    "01",
+
+                id:
+                    "IER-001",
+
+                blood:
+                    "A+",
+
+                district:
+                    "Rajshahi",
+
+                contact:
+                    "01XXXXXXXXX",
+
+                photo:
+                    "images/member1.jpg"
+
             },
 
 
             {
-                name: "Member Two",
-                special: "Special Name",
-                roll: "02",
-                id: "IER-002",
-                blood: "B+",
-                district: "Dhaka",
-                contact: "01XXXXXXXXX",
-                photo: "images/member2.jpg"
+
+                name:
+                    "Member Two",
+
+                special:
+                    "Special Name",
+
+                roll:
+                    "02",
+
+                id:
+                    "IER-002",
+
+                blood:
+                    "B+",
+
+                district:
+                    "Dhaka",
+
+                contact:
+                    "01XXXXXXXXX",
+
+                photo:
+                    "images/member2.jpg"
+
             },
 
 
             {
-                name: "Member Three",
-                special: "Special Name",
-                roll: "03",
-                id: "IER-003",
-                blood: "O+",
-                district: "Rangpur",
-                contact: "01XXXXXXXXX",
-                photo: "images/member3.jpg"
+
+                name:
+                    "Member Three",
+
+                special:
+                    "Special Name",
+
+                roll:
+                    "03",
+
+                id:
+                    "IER-003",
+
+                blood:
+                    "O+",
+
+                district:
+                    "Rangpur",
+
+                contact:
+                    "01XXXXXXXXX",
+
+                photo:
+                    "images/member3.jpg"
+
             },
 
 
             {
-                name: "Member Four",
-                special: "Special Name",
-                roll: "04",
-                id: "IER-004",
-                blood: "AB+",
-                district: "Khulna",
-                contact: "01XXXXXXXXX",
-                photo: "images/member4.jpg"
+
+                name:
+                    "Member Four",
+
+                special:
+                    "Special Name",
+
+                roll:
+                    "04",
+
+                id:
+                    "IER-004",
+
+                blood:
+                    "AB+",
+
+                district:
+                    "Khulna",
+
+                contact:
+                    "01XXXXXXXXX",
+
+                photo:
+                    "images/member4.jpg"
+
             }
 
         ];
@@ -1009,57 +1791,77 @@
         ===================================================== */
 
         const membersGrid =
-            document.getElementById("membersGrid");
-
-
-        members.forEach((member, index) => {
-
-            const card =
-                document.createElement("article");
-
-            card.className = "member-card";
-
-
-            card.innerHTML = `
-
-                <div class="member-photo">
-
-                    <img
-                        src="${member.photo}"
-                        alt="${member.name}"
-                    >
-
-                </div>
-
-
-                <div class="member-info">
-
-                    <div class="member-roll">
-                        ROLL ${member.roll}
-                    </div>
-
-                    <div class="member-name">
-                        ${member.name}
-                    </div>
-
-                    <div class="member-special">
-                        ${member.special}
-                    </div>
-
-                </div>
-
-            `;
-
-
-            card.addEventListener(
-                "click",
-                () => openProfile(index)
+            document.getElementById(
+                "membersGrid"
             );
 
 
-            membersGrid.appendChild(card);
+        members.forEach(
+            (member, index) => {
 
-        });
+
+                const card =
+                    document.createElement(
+                        "article"
+                    );
+
+
+                card.className =
+                    "member-card";
+
+
+                card.innerHTML = `
+
+                    <div class="member-photo">
+
+                        <img
+                            src="${member.photo}"
+                            alt="${member.name}"
+                        >
+
+                    </div>
+
+
+                    <div class="member-info">
+
+                        <div class="member-roll">
+
+                            ROLL ${member.roll}
+
+                        </div>
+
+
+                        <div class="member-name">
+
+                            ${member.name}
+
+                        </div>
+
+
+                        <div class="member-special">
+
+                            ${member.special}
+
+                        </div>
+
+                    </div>
+
+                `;
+
+
+                card.addEventListener(
+                    "click",
+                    () =>
+                        openProfile(index)
+                );
+
+
+                membersGrid.appendChild(
+                    card
+                );
+
+            }
+        );
 
 
 
@@ -1069,52 +1871,77 @@
 
         function openProfile(index) {
 
-            const member = members[index];
+
+            const member =
+                members[index];
 
 
-            document.getElementById("main-site")
-                .style.display = "none";
+            document.getElementById(
+                "main-site"
+            ).style.display = "none";
 
 
-            document.getElementById("profileView")
-                .classList.add("active");
+            document.getElementById(
+                "profileView"
+            ).classList.add(
+                "active"
+            );
 
 
-            document.getElementById("profilePhoto")
-                .src = member.photo;
+            document.getElementById(
+                "profilePhoto"
+            ).src =
+                member.photo;
 
 
-            document.getElementById("profileName")
-                .textContent = member.name;
+            document.getElementById(
+                "profileName"
+            ).textContent =
+                member.name;
 
 
-            document.getElementById("profileSpecial")
-                .textContent = member.special;
+            document.getElementById(
+                "profileSpecial"
+            ).textContent =
+                member.special;
 
 
-            document.getElementById("profileRoll")
-                .textContent = member.roll;
+            document.getElementById(
+                "profileRoll"
+            ).textContent =
+                member.roll;
 
 
-            document.getElementById("profileId")
-                .textContent = member.id;
+            document.getElementById(
+                "profileId"
+            ).textContent =
+                member.id;
 
 
-            document.getElementById("profileBlood")
-                .textContent = member.blood;
+            document.getElementById(
+                "profileBlood"
+            ).textContent =
+                member.blood;
 
 
-            document.getElementById("profileDistrict")
-                .textContent = member.district;
+            document.getElementById(
+                "profileDistrict"
+            ).textContent =
+                member.district;
 
 
-            document.getElementById("profileContact")
-                .textContent = member.contact;
+            document.getElementById(
+                "profileContact"
+            ).textContent =
+                member.contact;
 
 
             window.scrollTo({
+
                 top: 0,
+
                 behavior: "smooth"
+
             });
 
         }
@@ -1127,23 +1954,34 @@
 
         function closeProfile() {
 
-            document.getElementById("profileView")
-                .classList.remove("active");
+
+            document.getElementById(
+                "profileView"
+            ).classList.remove(
+                "active"
+            );
 
 
-            document.getElementById("main-site")
-                .style.display = "block";
+            document.getElementById(
+                "main-site"
+            ).style.display =
+                "block";
 
 
             window.scrollTo({
+
                 top: 0,
+
                 behavior: "smooth"
+
             });
 
         }
+
 
     </script>
 
 
 </body>
+
 </html>
