@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +20,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
@@ -28,7 +33,7 @@
 
 
     <!-- =====================================================
-         HEADER CSS
+         ALL CSS
     ====================================================== -->
 
     <style>
@@ -53,10 +58,10 @@
 
             --text-soft: #66575a;
 
-            --border-soft: rgba(100, 28, 43, 0.18);
+            --border-soft:
+                rgba(100, 28, 43, 0.18);
 
         }
-
 
 
         /* =====================================================
@@ -83,9 +88,11 @@
 
         body {
 
-            background: var(--cream);
+            background:
+                var(--cream);
 
-            color: var(--text-dark);
+            color:
+                var(--text-dark);
 
             font-family:
                 "Montserrat",
@@ -94,8 +101,9 @@
 
             min-height: 100vh;
 
-        }
+            overflow-x: hidden;
 
+        }
 
 
         /* =====================================================
@@ -107,7 +115,6 @@
             position: fixed;
 
             top: 0;
-
             left: 0;
 
             width: 100%;
@@ -118,11 +125,14 @@
                 rgba(245, 240, 230, 0.94);
 
             border-bottom:
-                1px solid var(--border-soft);
+                1px solid
+                var(--border-soft);
 
-            backdrop-filter: blur(14px);
+            backdrop-filter:
+                blur(14px);
 
-            -webkit-backdrop-filter: blur(14px);
+            -webkit-backdrop-filter:
+                blur(14px);
 
             z-index: 1000;
 
@@ -134,8 +144,9 @@
         }
 
 
-
-        /* Header after scrolling */
+        /* =====================================================
+           HEADER AFTER SCROLL
+        ====================================================== */
 
         .site-header.scrolled {
 
@@ -151,27 +162,30 @@
         }
 
 
-
         /* =====================================================
            NAV CONTAINER
         ====================================================== */
 
         .nav-container {
 
-            width: min(1240px, 92%);
+            width:
+                min(1240px, 92%);
 
             height: 100%;
 
-            margin: auto;
+            margin:
+                auto;
 
-            display: flex;
+            display:
+                flex;
 
-            align-items: center;
+            align-items:
+                center;
 
-            justify-content: space-between;
+            justify-content:
+                space-between;
 
         }
-
 
 
         /* =====================================================
@@ -180,53 +194,71 @@
 
         .brand {
 
-            display: flex;
+            display:
+                flex;
 
-            align-items: center;
+            align-items:
+                center;
 
-            gap: 13px;
+            gap:
+                13px;
 
-            text-decoration: none;
+            text-decoration:
+                none;
 
-            color: var(--text-dark);
+            color:
+                var(--text-dark);
 
         }
 
 
-
-        /* Roman VIII Circle */
+        /* =====================================================
+           BRAND MARK
+        ====================================================== */
 
         .brand-mark {
 
-            width: 48px;
+            width:
+                48px;
 
-            height: 48px;
+            height:
+                48px;
 
-            flex-shrink: 0;
+            flex-shrink:
+                0;
 
-            display: flex;
+            display:
+                flex;
 
-            align-items: center;
+            align-items:
+                center;
 
-            justify-content: center;
+            justify-content:
+                center;
 
             border:
-                1.5px solid var(--burgundy);
+                1.5px solid
+                var(--burgundy);
 
-            border-radius: 50%;
+            border-radius:
+                50%;
 
-            color: var(--burgundy);
+            color:
+                var(--burgundy);
 
             font-family:
                 "Playfair Display",
                 Georgia,
                 serif;
 
-            font-size: 17px;
+            font-size:
+                17px;
 
-            font-weight: 700;
+            font-weight:
+                700;
 
-            letter-spacing: 1px;
+            letter-spacing:
+                1px;
 
             transition:
                 background 0.3s ease,
@@ -236,20 +268,22 @@
         }
 
 
-
-        /* Brand hover */
+        /* =====================================================
+           BRAND HOVER
+        ====================================================== */
 
         .brand:hover .brand-mark {
 
-            background: var(--burgundy);
+            background:
+                var(--burgundy);
 
-            color: var(--cream);
+            color:
+                var(--cream);
 
             transform:
                 rotate(-5deg);
 
         }
-
 
 
         /* =====================================================
@@ -258,58 +292,69 @@
 
         .brand-text {
 
-            display: flex;
+            display:
+                flex;
 
-            flex-direction: column;
+            flex-direction:
+                column;
 
-            gap: 4px;
+            gap:
+                4px;
 
         }
-
 
 
         .brand-main {
 
-            color: var(--burgundy);
+            color:
+                var(--burgundy);
 
             font-family:
                 "Montserrat",
                 Arial,
                 sans-serif;
 
-            font-size: 15px;
+            font-size:
+                15px;
 
-            font-weight: 800;
+            font-weight:
+                800;
 
-            letter-spacing: 1.5px;
+            letter-spacing:
+                1.5px;
 
-            line-height: 1;
+            line-height:
+                1;
 
         }
-
 
 
         .brand-sub {
 
-            color: #806c6f;
+            color:
+                #806c6f;
 
             font-family:
                 "Montserrat",
                 Arial,
                 sans-serif;
 
-            font-size: 7px;
+            font-size:
+                7px;
 
-            font-weight: 600;
+            font-weight:
+                600;
 
-            letter-spacing: 1.45px;
+            letter-spacing:
+                1.45px;
 
-            line-height: 1.3;
+            line-height:
+                1.3;
 
-            white-space: nowrap;
+            white-space:
+                nowrap;
 
         }
-
 
 
         /* =====================================================
@@ -318,42 +363,54 @@
 
         .main-nav {
 
-            display: flex;
+            display:
+                flex;
 
-            align-items: center;
+            align-items:
+                center;
 
-            gap: 7px;
+            gap:
+                7px;
 
         }
 
 
-
         .nav-link {
 
-            position: relative;
+            position:
+                relative;
 
-            display: inline-flex;
+            display:
+                inline-flex;
 
-            align-items: center;
+            align-items:
+                center;
 
-            justify-content: center;
+            justify-content:
+                center;
 
-            padding: 10px 17px;
+            padding:
+                10px 17px;
 
-            color: #4e4143;
+            color:
+                #4e4143;
 
-            text-decoration: none;
+            text-decoration:
+                none;
 
             font-family:
                 "Montserrat",
                 Arial,
                 sans-serif;
 
-            font-size: 11px;
+            font-size:
+                11px;
 
-            font-weight: 700;
+            font-weight:
+                700;
 
-            letter-spacing: 1px;
+            letter-spacing:
+                1px;
 
             transition:
                 color 0.3s ease,
@@ -362,24 +419,29 @@
         }
 
 
-
         /* =====================================================
            NAV UNDERLINE
         ====================================================== */
 
         .nav-link::after {
 
-            content: "";
+            content:
+                "";
 
-            position: absolute;
+            position:
+                absolute;
 
-            left: 17px;
+            left:
+                17px;
 
-            right: 17px;
+            right:
+                17px;
 
-            bottom: 3px;
+            bottom:
+                3px;
 
-            height: 2px;
+            height:
+                2px;
 
             background:
                 var(--burgundy);
@@ -396,7 +458,6 @@
         }
 
 
-
         .nav-link:hover {
 
             color:
@@ -405,14 +466,12 @@
         }
 
 
-
         .nav-link:hover::after {
 
             transform:
                 scaleX(1);
 
         }
-
 
 
         /* =====================================================
@@ -430,20 +489,21 @@
             border-radius:
                 30px;
 
-            padding-left: 20px;
+            padding-left:
+                20px;
 
-            padding-right: 20px;
+            padding-right:
+                20px;
 
         }
-
 
 
         .nav-link.active::after {
 
-            display: none;
+            display:
+                none;
 
         }
-
 
 
         /* =====================================================
@@ -452,43 +512,56 @@
 
         .menu-toggle {
 
-            display: none;
+            display:
+                none;
 
-            width: 44px;
+            width:
+                44px;
 
-            height: 44px;
+            height:
+                44px;
 
-            padding: 0;
+            padding:
+                0;
 
             border:
-                1px solid var(--border-soft);
+                1px solid
+                var(--border-soft);
 
-            border-radius: 50%;
+            border-radius:
+                50%;
 
             background:
                 transparent;
 
-            cursor: pointer;
+            cursor:
+                pointer;
 
-            align-items: center;
+            align-items:
+                center;
 
-            justify-content: center;
+            justify-content:
+                center;
 
-            flex-direction: column;
+            flex-direction:
+                column;
 
-            gap: 5px;
+            gap:
+                5px;
 
         }
 
 
-
         .menu-toggle span {
 
-            display: block;
+            display:
+                block;
 
-            width: 18px;
+            width:
+                18px;
 
-            height: 2px;
+            height:
+                2px;
 
             background:
                 var(--burgundy);
@@ -500,12 +573,12 @@
         }
 
 
-
         /* =====================================================
            MOBILE MENU ANIMATION
         ====================================================== */
 
-        .menu-toggle.active span:nth-child(1) {
+        .menu-toggle.active
+        span:nth-child(1) {
 
             transform:
                 translateY(7px)
@@ -514,14 +587,17 @@
         }
 
 
-        .menu-toggle.active span:nth-child(2) {
+        .menu-toggle.active
+        span:nth-child(2) {
 
-            opacity: 0;
+            opacity:
+                0;
 
         }
 
 
-        .menu-toggle.active span:nth-child(3) {
+        .menu-toggle.active
+        span:nth-child(3) {
 
             transform:
                 translateY(-7px)
@@ -530,6 +606,566 @@
         }
 
 
+        /* =====================================================
+           HERO SECTION
+        ====================================================== */
+
+        .hero {
+
+            min-height:
+                100vh;
+
+            width:
+                100%;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            padding-top:
+                82px;
+
+            position:
+                relative;
+
+        }
+
+
+        /* =====================================================
+           HERO VISUAL
+        ====================================================== */
+
+        .hero-visual {
+
+            position:
+                relative;
+
+            width:
+                470px;
+
+            height:
+                470px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            flex-shrink:
+                0;
+
+            transform:
+                translateY(120px);
+
+        }
+
+
+        /* =====================================================
+           PHOTO WRAPPER
+        ====================================================== */
+
+        .elite-photo-wrapper {
+
+            position:
+                relative;
+
+            width:
+                430px;
+
+            height:
+                430px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            transition:
+                transform .8s
+                cubic-bezier(.2,.8,.2,1);
+
+        }
+
+
+        /* =====================================================
+           BURGUNDY GLOW
+        ====================================================== */
+
+        .elite-photo-glow {
+
+            position:
+                absolute;
+
+            width:
+                410px;
+
+            height:
+                410px;
+
+            border-radius:
+                50%;
+
+            background:
+                rgba(100, 28, 43, 0.16);
+
+            filter:
+                blur(30px);
+
+            opacity:
+                .65;
+
+            transition:
+                transform .8s ease,
+                opacity .6s ease,
+                border-radius .8s ease,
+                clip-path .8s ease;
+
+            pointer-events:
+                none;
+
+        }
+
+
+        /* =====================================================
+           BACK FRAME
+        ====================================================== */
+
+        .elite-photo-frame-back {
+
+            position:
+                absolute;
+
+            width:
+                410px;
+
+            height:
+                410px;
+
+            border-radius:
+                50%;
+
+            border:
+                1px solid
+                rgba(100, 28, 43, 0.28);
+
+            transform:
+                rotate(-4deg)
+                translate(-8px, 7px);
+
+            transition:
+                transform .8s
+                cubic-bezier(.2,.8,.2,1),
+                border-radius .8s ease,
+                clip-path .8s ease,
+                border-color .5s ease;
+
+            pointer-events:
+                none;
+
+        }
+
+
+        /* =====================================================
+           MAIN IMAGE CONTAINER
+        ====================================================== */
+
+        .elite-photo-container {
+
+            width:
+                400px;
+
+            height:
+                400px;
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--cream-soft);
+
+            border:
+                2px solid
+                rgba(100, 28, 43, 0.65);
+
+            box-shadow:
+                0 25px 70px
+                rgba(67, 18, 29, 0.16);
+
+            transition:
+                transform .8s
+                cubic-bezier(.2,.8,.2,1),
+                border-radius .8s ease,
+                clip-path .8s ease,
+                border-color .5s ease,
+                filter .5s ease;
+
+            z-index:
+                2;
+
+        }
+
+
+        /* =====================================================
+           IMAGE
+        ====================================================== */
+
+        .elite-photo-container img {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            object-fit:
+                cover;
+
+            object-position:
+                center 75%;
+
+            display:
+                block;
+
+            filter:
+                grayscale(100%)
+                contrast(1.08);
+
+            transition:
+                filter .7s ease,
+                transform .9s
+                cubic-bezier(.2,.8,.2,1);
+
+        }
+
+
+        /* =====================================================
+           PHOTO SHINE
+        ====================================================== */
+
+        .elite-photo-container::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            top:
+                -120%;
+
+            left:
+                -100%;
+
+            width:
+                55%;
+
+            height:
+                300%;
+
+            background:
+                linear-gradient(
+                    110deg,
+                    transparent,
+                    rgba(255,255,255,.42),
+                    transparent
+                );
+
+            transform:
+                rotate(20deg);
+
+            opacity:
+                0;
+
+            pointer-events:
+                none;
+
+        }
+
+
+        /* =====================================================
+           HOVER — MAIN PHOTO
+        ====================================================== */
+
+        .elite-photo-wrapper:hover
+        .elite-photo-container {
+
+            transform:
+                rotate(3deg)
+                scale(1.035);
+
+            border-radius:
+                0;
+
+            clip-path:
+                polygon(
+                    25% 3%,
+                    75% 3%,
+                    100% 50%,
+                    75% 97%,
+                    25% 97%,
+                    0% 50%
+                );
+
+            border-color:
+                rgba(100, 28, 43, 0.85);
+
+            filter:
+                drop-shadow(
+                    0 0 25px
+                    rgba(100, 28, 43, 0.24)
+                );
+
+        }
+
+
+        /* =====================================================
+           HOVER — ORIGINAL COLOUR
+        ====================================================== */
+
+        .elite-photo-wrapper:hover
+        .elite-photo-container img {
+
+            filter:
+                none;
+
+            transform:
+                scale(1.035);
+
+        }
+
+
+        /* =====================================================
+           HOVER — BACK FRAME
+        ====================================================== */
+
+        .elite-photo-wrapper:hover
+        .elite-photo-frame-back {
+
+            transform:
+                rotate(5deg)
+                translate(9px,-5px)
+                scale(1.02);
+
+            border-radius:
+                0;
+
+            clip-path:
+                polygon(
+                    25% 3%,
+                    75% 3%,
+                    100% 50%,
+                    75% 97%,
+                    25% 97%,
+                    0% 50%
+                );
+
+            border-color:
+                rgba(100, 28, 43, 0.55);
+
+        }
+
+
+        /* =====================================================
+           HOVER — GLOW
+        ====================================================== */
+
+        .elite-photo-wrapper:hover
+        .elite-photo-glow {
+
+            transform:
+                scale(1.12);
+
+            opacity:
+                .42;
+
+            border-radius:
+                0;
+
+            clip-path:
+                polygon(
+                    25% 3%,
+                    75% 3%,
+                    100% 50%,
+                    75% 97%,
+                    25% 97%,
+                    0% 50%
+                );
+
+            filter:
+                blur(34px);
+
+        }
+
+
+        /* =====================================================
+           HOVER — SHINE
+        ====================================================== */
+
+        .elite-photo-wrapper:hover
+        .elite-photo-container::after {
+
+            opacity:
+                1;
+
+            animation:
+                elitePhotoShine 1.1s
+                ease forwards;
+
+        }
+
+
+        @keyframes elitePhotoShine {
+
+            0% {
+
+                left:
+                    -90%;
+
+            }
+
+            100% {
+
+                left:
+                    150%;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           DECORATIVE BURGUNDY DOT — TOP
+        ====================================================== */
+
+        .elite-photo-wrapper::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                8px;
+
+            height:
+                8px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--burgundy);
+
+            box-shadow:
+                0 0 15px
+                rgba(100,28,43,.45),
+
+                0 0 30px
+                rgba(100,28,43,.22);
+
+            top:
+                42px;
+
+            right:
+                8px;
+
+            animation:
+                eliteDotMove 3s
+                ease-in-out infinite;
+
+            z-index:
+                5;
+
+        }
+
+
+        /* =====================================================
+           DECORATIVE BURGUNDY DOT — BOTTOM
+        ====================================================== */
+
+        .elite-photo-wrapper::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                5px;
+
+            height:
+                5px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--burgundy-light);
+
+            box-shadow:
+                0 0 12px
+                rgba(123,41,57,.45),
+
+                0 0 25px
+                rgba(123,41,57,.22);
+
+            bottom:
+                50px;
+
+            left:
+                15px;
+
+            animation:
+                eliteDotMove 4s
+                ease-in-out infinite reverse;
+
+            z-index:
+                5;
+
+        }
+
+
+        @keyframes eliteDotMove {
+
+            0%, 100% {
+
+                transform:
+                    translateY(0)
+                    scale(1);
+
+            }
+
+            50% {
+
+                transform:
+                    translateY(-15px)
+                    scale(1.35);
+
+            }
+
+        }
+
 
         /* =====================================================
            MOBILE NAVIGATION
@@ -537,72 +1173,77 @@
 
         @media (max-width: 900px) {
 
-
             .site-header {
 
-                height: 74px;
+                height:
+                    74px;
 
             }
-
 
 
             .nav-container {
 
-                width: 90%;
+                width:
+                    90%;
 
             }
-
 
 
             .brand-mark {
 
-                width: 43px;
+                width:
+                    43px;
 
-                height: 43px;
+                height:
+                    43px;
 
-                font-size: 15px;
+                font-size:
+                    15px;
 
             }
-
 
 
             .brand-main {
 
-                font-size: 13px;
+                font-size:
+                    13px;
 
             }
-
 
 
             .brand-sub {
 
-                font-size: 6px;
+                font-size:
+                    6px;
 
             }
 
 
-
-            /* Show hamburger */
+            /* SHOW HAMBURGER */
 
             .menu-toggle {
 
-                display: flex;
+                display:
+                    flex;
 
             }
 
 
-
-            /* Mobile navigation */
+            /* MOBILE NAV */
 
             .main-nav {
 
-                position: absolute;
+                position:
+                    absolute;
 
-                top: 74px;
+                top:
+                    74px;
 
-                left: 0;
+                left:
+                    0;
 
-                width: 100%;
+                width:
+                    100%;
 
                 padding:
                     15px 5% 20px;
@@ -617,19 +1258,26 @@
                     blur(16px);
 
                 border-bottom:
-                    1px solid var(--border-soft);
+                    1px solid
+                    var(--border-soft);
 
-                display: flex;
+                display:
+                    flex;
 
-                flex-direction: column;
+                flex-direction:
+                    column;
 
-                align-items: stretch;
+                align-items:
+                    stretch;
 
-                gap: 4px;
+                gap:
+                    4px;
 
-                opacity: 0;
+                opacity:
+                    0;
 
-                visibility: hidden;
+                visibility:
+                    hidden;
 
                 transform:
                     translateY(-10px);
@@ -642,14 +1290,13 @@
             }
 
 
-
-            /* Open mobile menu */
-
             .main-nav.open {
 
-                opacity: 1;
+                opacity:
+                    1;
 
-                visibility: visible;
+                visibility:
+                    visible;
 
                 transform:
                     translateY(0);
@@ -657,10 +1304,10 @@
             }
 
 
-
             .nav-link {
 
-                width: 100%;
+                width:
+                    100%;
 
                 justify-content:
                     flex-start;
@@ -668,543 +1315,148 @@
                 padding:
                     13px 18px;
 
-                border-radius: 8px;
+                border-radius:
+                    8px;
 
             }
-
 
 
             .nav-link.active {
 
-                padding-left: 18px;
+                padding-left:
+                    18px;
 
-                padding-right: 18px;
+                padding-right:
+                    18px;
 
-                border-radius: 8px;
+                border-radius:
+                    8px;
 
             }
-
 
 
             .nav-link::after {
 
-                display: none;
+                display:
+                    none;
+
+            }
+
+
+            /* =================================================
+               HERO — TABLET
+            ================================================== */
+
+            .hero {
+
+                min-height:
+                    100vh;
+
+                padding-top:
+                    74px;
+
+            }
+
+
+            .hero-visual {
+
+                width:
+                    420px;
+
+                height:
+                    420px;
+
+            }
+
+
+            .elite-photo-wrapper {
+
+                transform:
+                    scale(.88);
 
             }
 
         }
-
 
 
         /* =====================================================
            SMALL PHONES
         ====================================================== */
 
-        @media (max-width: 480px) {
+        @media (max-width: 600px) {
 
+            .hero {
 
-            .brand-sub {
-
-                display: none;
-
-            }
-
-
-
-            .brand-main {
-
-                font-size: 12px;
-
-                letter-spacing: 1px;
+                padding-top:
+                    74px;
 
             }
 
 
+            .hero-visual {
 
-            .brand-mark {
+                width:
+                    350px;
 
-                width: 40px;
+                height:
+                    350px;
 
-                height: 40px;
+            }
 
-                font-size: 14px;
+
+            .elite-photo-wrapper {
+
+                transform:
+                    scale(.72);
 
             }
 
         }
 
+
         /* =====================================================
-   ELITE VIII — HERO LEFT VISUAL
-===================================================== */
+           VERY SMALL PHONES
+        ====================================================== */
 
-.hero-visual {
+        @media (max-width: 480px) {
 
-    position: relative;
+            .brand-sub {
 
-    width: 470px;
-    height: 470px;
+                display:
+                    none;
 
-    display: flex;
+            }
 
-    align-items: center;
-    justify-content: center;
 
-    flex-shrink: 0;
-    transform: translateY(120px);
-}
+            .brand-main {
 
+                font-size:
+                    12px;
 
-/* =====================================================
-   PHOTO WRAPPER
-===================================================== */
+                letter-spacing:
+                    1px;
 
-.elite-photo-wrapper {
+            }
 
-    position: relative;
 
-    width: 430px;
-    height: 430px;
+            .brand-mark {
 
-    display: flex;
+                width:
+                    40px;
 
-    align-items: center;
-    justify-content: center;
+                height:
+                    40px;
 
-    transition:
-        transform .8s
-        cubic-bezier(.2,.8,.2,1);
-}
+                font-size:
+                    14px;
 
+            }
 
-/* =====================================================
-   BURGUNDY GLOW
-===================================================== */
+        }
 
-.elite-photo-glow {
-
-    position: absolute;
-
-    width: 410px;
-    height: 410px;
-
-    border-radius: 50%;
-
-    background:
-        rgba(100, 28, 43, 0.16);
-
-    filter:
-        blur(30px);
-
-    opacity: .65;
-
-    transition:
-        transform .8s ease,
-        opacity .6s ease,
-        border-radius .8s ease,
-        clip-path .8s ease;
-
-    pointer-events: none;
-}
-
-
-/* =====================================================
-   BACK FRAME
-===================================================== */
-
-.elite-photo-frame-back {
-
-    position: absolute;
-
-    width: 410px;
-    height: 410px;
-
-    border-radius: 50%;
-
-    border:
-        1px solid
-        rgba(100, 28, 43, 0.28);
-
-    transform:
-        rotate(-4deg)
-        translate(-8px, 7px);
-
-    transition:
-        transform .8s
-        cubic-bezier(.2,.8,.2,1),
-        border-radius .8s ease,
-        clip-path .8s ease,
-        border-color .5s ease;
-
-    pointer-events: none;
-}
-
-
-/* =====================================================
-   MAIN IMAGE CONTAINER
-===================================================== */
-
-.elite-photo-container {
-
-    width: 400px;
-    height: 400px;
-
-    position: relative;
-
-    overflow: hidden;
-
-    border-radius: 50%;
-
-    background:
-        var(--cream-soft);
-
-    border:
-        2px solid
-        rgba(100, 28, 43, 0.65);
-
-    box-shadow:
-        0 25px 70px
-        rgba(67, 18, 29, 0.16);
-
-    transition:
-        transform .8s
-        cubic-bezier(.2,.8,.2,1),
-        border-radius .8s ease,
-        clip-path .8s ease,
-        border-color .5s ease,
-        filter .5s ease;
-
-    z-index: 2;
-}
-
-
-/* =====================================================
-   IMAGE
-===================================================== */
-
-.elite-photo-container img {
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;   
-    object-position: center 75%;
-
-    display: block;
-
-    filter:
-        grayscale(100%)
-        contrast(1.08);
-
-    transition:
-        filter .7s ease,
-        transform .9s
-        cubic-bezier(.2,.8,.2,1);
-
-}
-
-
-/* =====================================================
-   PHOTO SHINE
-===================================================== */
-
-.elite-photo-container::after {
-
-    content: "";
-
-    position: absolute;
-
-    top: -120%;
-    left: -100%;
-
-    width: 55%;
-    height: 300%;
-
-    background:
-        linear-gradient(
-            110deg,
-            transparent,
-            rgba(255,255,255,.42),
-            transparent
-        );
-
-    transform:
-        rotate(20deg);
-
-    opacity: 0;
-
-    pointer-events: none;
-}
-
-
-/* =====================================================
-   HOVER — MAIN PHOTO
-===================================================== */
-
-.elite-photo-wrapper:hover
-.elite-photo-container {
-
-    transform:
-        rotate(3deg)
-        scale(1.035);
-
-    border-radius: 0;
-
-    clip-path:
-        polygon(
-            25% 3%,
-            75% 3%,
-            100% 50%,
-            75% 97%,
-            25% 97%,
-            0% 50%
-        );
-
-    border-color:
-        rgba(100, 28, 43, 0.85);
-
-    filter:
-        drop-shadow(
-            0 0 25px
-            rgba(100, 28, 43, 0.24)
-        );
-}
-
-
-/* =====================================================
-   HOVER — ORIGINAL COLOUR
-===================================================== */
-
-.elite-photo-wrapper:hover
-.elite-photo-container img {
-
-    filter: none;
-
-    transform:
-        scale(1.035);
-}
-
-
-/* =====================================================
-   HOVER — BACK FRAME
-===================================================== */
-
-.elite-photo-wrapper:hover
-.elite-photo-frame-back {
-
-    transform:
-        rotate(5deg)
-        translate(9px,-5px)
-        scale(1.02);
-
-    border-radius: 0;
-
-    clip-path:
-        polygon(
-            25% 3%,
-            75% 3%,
-            100% 50%,
-            75% 97%,
-            25% 97%,
-            0% 50%
-        );
-
-    border-color:
-        rgba(100, 28, 43, 0.55);
-}
-
-
-/* =====================================================
-   HOVER — GLOW
-===================================================== */
-
-.elite-photo-wrapper:hover
-.elite-photo-glow {
-
-    transform:
-        scale(1.12);
-
-    opacity: .42;
-
-    border-radius: 0;
-
-    clip-path:
-        polygon(
-            25% 3%,
-            75% 3%,
-            100% 50%,
-            75% 97%,
-            25% 97%,
-            0% 50%
-        );
-
-    filter:
-        blur(34px);
-}
-
-
-/* =====================================================
-   HOVER — SHINE ANIMATION
-===================================================== */
-
-.elite-photo-wrapper:hover
-.elite-photo-container::after {
-
-    opacity: 1;
-
-    animation:
-        elitePhotoShine 1.1s ease forwards;
-}
-
-
-@keyframes elitePhotoShine {
-
-    0% {
-
-        left: -90%;
-
-    }
-
-    100% {
-
-        left: 150%;
-
-    }
-
-}
-
-
-/* =====================================================
-   DECORATIVE BURGUNDY DOTS
-===================================================== */
-
-.elite-photo-wrapper::before {
-
-    content: "";
-
-    position: absolute;
-
-    width: 8px;
-    height: 8px;
-
-    border-radius: 50%;
-
-    background:
-        var(--burgundy);
-
-    box-shadow:
-        0 0 15px
-        rgba(100,28,43,.45),
-
-        0 0 30px
-        rgba(100,28,43,.22);
-
-    top: 42px;
-    right: 8px;
-
-    animation:
-        eliteDotMove 3s ease-in-out infinite;
-
-    z-index: 5;
-}
-
-
-.elite-photo-wrapper::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 5px;
-    height: 5px;
-
-    border-radius: 50%;
-
-    background:
-        var(--burgundy-light);
-
-    box-shadow:
-        0 0 12px
-        rgba(123,41,57,.45),
-
-        0 0 25px
-        rgba(123,41,57,.22);
-
-    bottom: 50px;
-    left: 15px;
-
-    animation:
-        eliteDotMove 4s ease-in-out infinite reverse;
-
-    z-index: 5;
-}
-
-
-@keyframes eliteDotMove {
-
-    0%,100% {
-
-        transform:
-            translateY(0)
-            scale(1);
-
-    }
-
-    50% {
-
-        transform:
-            translateY(-15px)
-            scale(1.35);
-
-    }
-
-}
-
-
-/* =====================================================
-   RESPONSIVE
-===================================================== */
-
-@media (max-width: 900px) {
-
-    .hero-visual {
-
-        width: 420px;
-        height: 420px;
-
-    }
-
-    .elite-photo-wrapper {
-
-        transform:
-            scale(.88);
-
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    .hero-visual {
-
-        width: 350px;
-        height: 350px;
-
-    }
-
-    .elite-photo-wrapper {
-
-        transform:
-            scale(.72);
-
-    }
-
-}
-        
     </style>
 
 </head>
-
 
 
 <body>
@@ -1249,7 +1501,6 @@
                 </div>
 
             </a>
-
 
 
             <!-- =================================================
@@ -1303,7 +1554,6 @@
             </nav>
 
 
-
             <!-- =================================================
                  MOBILE MENU BUTTON
             ================================================== -->
@@ -1316,57 +1566,53 @@
             >
 
                 <span></span>
-
                 <span></span>
-
                 <span></span>
 
             </button>
-
 
         </div>
 
     </header>
 
 
+    <!-- =====================================================
+         HERO — ELITE VIII
+    ====================================================== -->
 
-  <!-- =====================================================
-     HERO — ELITE VIII
-===================================================== -->
+    <main id="home">
 
-<main id="home">
+        <section class="hero">
 
-    <section class="hero">
 
-        <!-- LEFT IMAGE -->
+            <!-- =================================================
+                 CENTERED HERO IMAGE
+            ================================================== -->
 
-        <div class="hero-visual">
+            <div class="hero-visual">
 
-            <div class="elite-photo-wrapper">
+                <div class="elite-photo-wrapper">
 
-                <div class="elite-photo-glow"></div>
+                    <div class="elite-photo-glow"></div>
 
-                <div class="elite-photo-frame-back"></div>
+                    <div class="elite-photo-frame-back"></div>
 
-                <div class="elite-photo-container">
+                    <div class="elite-photo-container">
 
-                    <img
-                        src="ierviiilogo.png"
-                        alt="IER Elite VIII"
-                    >
+                        <img
+                            src="ierviiilogo.png"
+                            alt="IER Elite VIII"
+                        >
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
-
-        <!-- RIGHT SIDE WILL BE ADDED LATER -->
-
-    </section>
-
-</main>
+    </main>
 
 
     <!-- =====================================================
@@ -1381,14 +1627,21 @@
         ====================================================== */
 
         const siteHeader =
-            document.getElementById("siteHeader");
+            document.getElementById(
+                "siteHeader"
+            );
+
 
         const menuToggle =
-            document.getElementById("menuToggle");
+            document.getElementById(
+                "menuToggle"
+            );
+
 
         const mainNav =
-            document.getElementById("mainNav");
-
+            document.getElementById(
+                "mainNav"
+            );
 
 
         /* =====================================================
@@ -1399,7 +1652,9 @@
             "scroll",
             function () {
 
-                if (window.scrollY > 30) {
+                if (
+                    window.scrollY > 30
+                ) {
 
                     siteHeader.classList.add(
                         "scrolled"
@@ -1417,7 +1672,6 @@
         );
 
 
-
         /* =====================================================
            MOBILE MENU TOGGLE
         ====================================================== */
@@ -1427,7 +1681,9 @@
             function () {
 
                 const isOpen =
-                    mainNav.classList.toggle("open");
+                    mainNav.classList.toggle(
+                        "open"
+                    );
 
 
                 menuToggle.classList.toggle(
@@ -1444,13 +1700,14 @@
         );
 
 
-
         /* =====================================================
            CLOSE MOBILE MENU AFTER CLICK
         ====================================================== */
 
         document
-            .querySelectorAll(".nav-link")
+            .querySelectorAll(
+                ".nav-link"
+            )
             .forEach(
                 function (link) {
 
@@ -1480,13 +1737,14 @@
             );
 
 
-
         /* =====================================================
            ACTIVE NAVIGATION
         ====================================================== */
 
         const navLinks =
-            document.querySelectorAll(".nav-link");
+            document.querySelectorAll(
+                ".nav-link"
+            );
 
 
         navLinks.forEach(
@@ -1517,10 +1775,9 @@
             }
         );
 
-
     </script>
-
 
 </body>
 
 </html>
+```
